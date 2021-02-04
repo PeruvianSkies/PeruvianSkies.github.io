@@ -1,0 +1,72 @@
+# section information
+section:
+  name: it's Not Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+  - name: All
+    filter: "all"
+  - name: Bootcamp
+    filter: "bootcamp"
+  - name: Hiring Test
+    filter: "hiring"
+  - name: Hobby
+    filter: "hobby"
+
+# your projects
+projects:
+  - name: dumbflix
+    logo: /images/sections/projects/logodum.png
+    role: DevOps
+    timeline: "Nov 2020"
+    repo: https://github.com/peruvianskies/Devops-final # If your project is a public repo on GitHub, then provide this link. it will show star count.
+    #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+    summary: Deploying dumbflix application, using docker container with AWS cloud server.
+    tags: ["bootcamp", "cloud"]
+
+  - name: dumbsound
+    logo: /images/sections/projects/iconplay.png
+    role: DevOps
+    timeline: "Oct 2020"
+    repo: https://github.com/PeruvianSkies/dumbways.id
+    #url: ""
+    summary: Deploying dumbsound application, using Ansible with AWS server and VMware.
+    tags: ["bootcamp", "academic"]
+
+  - name: Codemi Test
+    role: Nothing
+    timeline: "Des 2020"
+    repo: https://github.com/PeruvianSkies/codemi
+    summary: Technical Test.
+    tags: ["hiring", "profesional"]
+
+  - name: Eigen Test
+    logo: /images/sections/projects/no-code.png
+    role: Nothing
+    timeline: "Jan 2021"
+    repo: https://gitlab.com/PeruvianSkies/eigentrimathema
+    #url: ""
+    summary: Technical test.
+    tags: ["hiring", "profesional"]
+
+  - name: Scripting
+    logo: /images/sections/projects/bash-shell.png
+    role: Nothing
+    timeline:
+    repo: https://github.com/PeruvianSkies/Automation.aws/blob/master/automation.sh
+    summary: Script for automation install.
+    tags: ["hobby", "cloud"]
+
+  - name: Playbook
+    logo: /images/sections/projects/ansible.png
+    role: Nothing
+    timeline:
+    repo: https://github.com/PeruvianSkies/automation-playbook
+    summary: My Playbook.
+    tags: ["hobby", "cloud"]
