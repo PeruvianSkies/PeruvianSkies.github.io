@@ -24,12 +24,12 @@ enableEmoji: true
 # Site parameters
 params:
   # GitHub repo URL of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/peruvianskies.github.io
 
   logo:
-    main: "images/favicon.png"
-    inverted: "images/favicon.png"
-    favicon: "images/favicon.png"
+    main: "/images/favicon.png"
+    inverted: "/images/favicon.png"
+    favicon: "/images/favicon.png"
 
   # specify whether you want to write some blog posts or not
   enableBlogPost: false
@@ -42,4 +42,4 @@ params:
   newsletter:
     enable: false
 
-  background: "images/background1.jpg"
+  background: "/images/background1.jpg"
