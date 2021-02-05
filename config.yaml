@@ -24,7 +24,7 @@ enableEmoji: true
 # Site parameters
 params:
   # GitHub repo URL of your site
-  gitRepo: https://github.com/peruvianskies.github.io
+  gitRepo: https://github.com/PeruvianSkies/PeruvianSkies.github.io
 
   logo:
     main: "/images/favicon.png"
