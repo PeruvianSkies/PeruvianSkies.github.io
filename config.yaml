@@ -26,6 +26,8 @@ params:
   # GitHub repo URL of your site
   gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
 
+  backgroud: "images/default-background.jpg"
+
   logo:
     main: "images/favicon.png"
     inverted: "images/favicon.png"
