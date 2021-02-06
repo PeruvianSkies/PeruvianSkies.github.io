@@ -40,7 +40,7 @@ socialLinks:
 
   - name: Whatsapp
     icon: "fab fa-whatsapp"
-    url: "https://api.whatsapp.com/send?phone=682120320330&text=Halo%0ASaya%20Ingin%20Berkenalan%20Dengan%20Anda"
+    url: "https://api.whatsapp.com/send?phone=682120320330"
 
   - name: Telegram
     icon: "fab fa-telegram"
