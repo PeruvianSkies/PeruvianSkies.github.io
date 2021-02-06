@@ -26,10 +26,6 @@ socialLinks:
     icon: "fab fa-linkedin"
     url: "https://www.linkedin.com/in/tian-putra-nuhcahya/"
 
-  - name: Email
-    icon: "fas fa-envelope"
-    url: "mailto:tianputra33@yahoo.com"
-
   - name: Github
     icon: "fab fa-github"
     url: "https://www.github.com/PeruvianSkies"
@@ -37,6 +33,19 @@ socialLinks:
   - name: Gitlab
     icon: "fab fa-gitlab"
     url: "https://gitlab.com/PeruvianSkies"
+
+  - name: Email
+    icon: "fas fa-envelope"
+    url: "mailto:tianputra33@yahoo.com"
+
+  - name: Whatsapp
+    icon: "fab fa-whatsapp"
+    url: "https://api.whatsapp.com/send?phone=682120320330&text=Halo%0ASaya%20Ingin%20Berkenalan%20Dengan%20Anda"
+
+  - name: Telegram
+    icon: "fab fa-telegram"
+    url: "https://t.me/Tianputra"
+
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
