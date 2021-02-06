@@ -12,7 +12,7 @@ section:
 experiences:
   - company:
       name: PT Adira Dinamika Multi Finance
-      url: "https://www.example.com"
+      url: "https://www.adira.co.id/"
       location: Jakarta Barat
       # company overview
       # overview: The one of largest multi finance company in Indonesia.
@@ -28,7 +28,7 @@ experiences:
 
   - company:
       name: PT Sinqe Material Indonesia
-      url: "https://www.preexample.com"
+      url: "http://www.cntopbright.com/products.html"
       location: Jakarta Barat
       # overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
     positions:
@@ -41,7 +41,7 @@ experiences:
 
   - company:
       name: PT Blue Bird Group
-      url: "https://www.intern.com"
+      url: "https://www.bluebirdgroup.com/"
       location: Jakarta Selatan
       # overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
     positions:
@@ -54,7 +54,7 @@ experiences:
 
   - company:
       name: PT Adira Dinamika Multi Finance
-      url: "https://www.intern.com"
+      url: "https://www.adira.co.id/"
       location: Tangerang
       # overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
     positions:
