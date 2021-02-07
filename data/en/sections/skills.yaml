@@ -12,37 +12,46 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
   - name: Ansible
-    icon: "images/skills/kubernetes.png"
+    icon: "images/skills/ansible.png"
     summary: "Able to create a configuration to automate multiple servers with ansible-playbook."
+    url: "https://docs.ansible.com/"
 
   - name: Jenkins
     icon: "images/skills/jenkins.png"
     summary: "Using as the main tools for CI/CD development. Capable of build pipeline for scalable, testable, and maintainable program."
+    url: "https://www.jenkins.io/doc/"
 
   - name: Cloud Computing
     icon: "images/skills/cloud.png"
     summary: "Worked with most of the major clouds such as AWS."
+    url: "https://docs.aws.amazon.com/index.html"
 
   - name: Docker
     icon: "images/skills/docker.svg"
     summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+    url: "https://docs.docker.com/"
 
   - name: Grafana
-    icon: "images/skills/prometheus.png"
+    icon: "images/skills/grafana.png"
     summary: "Capable of setup, configure with Prometheus metrics. Also, experienced with writing metric exporters."
+    url: "https://grafana.com/docs/"
 
   - name: Ubuntu Server
-    icon: "images/skills/linux.png"
+    icon: "images/skills/ubuntu.png"
     summary: "Using the main server operating system. Capable of writing bash/shell scripts."
+    url: "https://ubuntu.com/server/docs"
 
   - name: Git
     icon: "images/skills/git.png"
     summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+    url: "https://git-scm.com/doc"
 
   - name: Kubernetes
-    icon: "/images/skills/kubernetes.png"
+    icon: "static/images/skills/kubernetes.png"
     summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for HPA."
+    url: "https://kubernetes.io/docs/home/"
 
   - name: Network Automation
     icon: "images/skills/c++.png"
     summary: "Know basic Networking for setup and configuration."
+    url: "https://www.juniper.net/documentation/en_US/release-independent/automation/information-products/pathway-pages/index.html"
