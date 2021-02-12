@@ -12,7 +12,7 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
   - name: Ansible
-    icon: "images/skills/ansible.png"
+    icon: 
     summary: "Able to create a configuration to automate multiple servers with ansible-playbook."
     url: "https://docs.ansible.com/"
 
@@ -47,7 +47,7 @@ skills:
     url: "https://git-scm.com/doc"
 
   - name: Kubernetes
-    icon: "static/images/skills/kubernetes.png"
+    icon: "images/skills/kubernetes.png"
     summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for HPA."
     url: "https://kubernetes.io/docs/home/"
 
