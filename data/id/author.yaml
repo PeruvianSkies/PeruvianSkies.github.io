@@ -2,7 +2,7 @@
 name: "Tian Putra Nuhcahya"
 nickname: "Tian"
 # greeting message before your name. it will default to "Hi! I am" if not provided
-greeting: "Hi, I am "
+greeting: "Halo, saya"
 image: "images/author/avatar.jpg"
 # give your some contact information. they will be used in the footer
 contactInfo:
@@ -11,7 +11,7 @@ contactInfo:
 
 # some summary about what you do
 summary:
-  - I am a DevOps
-  - I love servers
-  - I love automation
-  - I love to work with some fun projects
+  - Saya seorang DevOps
+  - Saya suka dengan servers
+  - Saya suka hal-hal otomatis
+  - Projek-projek yang seru sangat menarik buat saya

@@ -1,7 +1,8 @@
 baseURL: https://PeruvianSkies.github.io
 
 languageCode: en-us
-title: "it's Me"
+defaultContentLanguage: en
+title: "Skies"
 theme: "toha"
 
 # Manage languages
@@ -10,6 +11,9 @@ languages:
   en:
     languageName: English
     weight: 1
+  id:
+    languageName: Indonesian
+    weight: 4
 
 # Control TOC depth
 markup:

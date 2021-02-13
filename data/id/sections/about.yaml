@@ -1,5 +1,6 @@
+# section information
 section:
-  name: About
+  name: Tentang Saya
   id: about
   enable: true
   weight: 1
@@ -17,7 +18,7 @@ company:
 resume: "files/resume.pdf"
 
 # a summary about you
-summary: "I am DevOps Engineer With Linux Server hands-on experience supporting, automating, and optimizing mission critical deployment in AWS, leveraging configuration management, CI / CD, and DevOps processes."
+summary: 'Saya seorang DevOps Engineer dengan pengalaman langsung pada Server Linux yang mendukung, mengotomatiskan, dan mengoptimalkan penerapan pada AWS, memanfaatkan manajemen konfigurasi, CI / CD, dan proses DevOps.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -50,21 +51,28 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-  - name: Comunication
-    percentage: 90
-    color: blue
-  - name: Team Work
-    percentage: 85
-    color: yellow
-  - name: Fast Learner
-    percentage: 80
-    color: green
-  - name: Hard Working
-    percentage: 85
-    color: orange
-  - name: Profesional
-    percentage: 85
-    color: sky
-  - name: Responsible
-    percentage: 80
-    color: pink
+- name: Komunikasi
+  percentage: 90
+  color: blue
+- name: Kerja Tim
+  percentage: 85
+  color: yellow
+- name: Mudah Paham
+  percentage: 80
+  color: green
+- name: Pekerja Keras
+  percentage: 85
+  color: orange
+- name: Profesional
+  percentage: 85
+  color: sky
+- name: Tanggung Jawab
+  percentage: 80
+  color: pink
+# you can also provide color code instead of pre-defined color name
+# - name: Example 1
+#   percentage: 75
+#   color: "#00adb5"
+# - name: Example 2
+#   percentage: 65
+#   color: "#8b8383"

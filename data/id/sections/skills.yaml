@@ -1,6 +1,6 @@
 # section information
 section:
-  name: Skills
+  name: Keahlian
   id: skills
   enable: true
   weight: 2
@@ -13,45 +13,45 @@ section:
 skills:
   - name: Ansible
     icon: "images/skills/ansible.png"
-    summary: "Able to create a configuration to automate multiple servers with ansible-playbook."
+    summary: "Mampu membuat sebuah konfigurasi untuk mengotomasisasi banyak server dengan ansible-playbook."
     url: "https://docs.ansible.com/"
 
   - name: Jenkins
     icon: "images/skills/jenkins.png"
-    summary: "Using as the main tools for CI/CD development. Capable of build pipeline for scalable, testable, and maintainable program."
+    summary: "Menggunakan perangkat utama CI/CD untuk meluncurkan. Mampu membuat pipeline yang terukur, dapat diuji, dan program yang dapat dipelihara."
     url: "https://www.jenkins.io/doc/"
 
   - name: Cloud Computing
     icon: "images/skills/cloud.png"
-    summary: "Worked with most of the major clouds such as AWS."
+    summary: "Bekerja dengan sebagian besar cloud server seperti AWS."
     url: "https://docs.aws.amazon.com/index.html"
 
   - name: Docker
     icon: "images/skills/docker.png"
-    summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+    summary: "Menulis sebagian besar program dengan container docker. Berpengalaman dengan proses multi-tahap, proses pembuatan multi-lingkungan."
     url: "https://docs.docker.com/"
 
   - name: Grafana
     icon: "images/skills/grafana.png"
-    summary: "Capable of setup and configure with Prometheus metrics. Also, experienced with writing metric exporters."
+    summary: "Mampu membuat pengaturan dan konfigurasi menggunakan metrik Prometheus, dan Berpengalaman dengan menulis metrik exporters."
     url: "https://grafana.com/docs/"
 
   - name: Ubuntu Server
     icon: "images/skills/ubuntu.png"
-    summary: "Using the main server operating system. Capable of writing bash/shell scripts."
+    summary: "Menggunakan ubuntu sebagai main server sistem. Mampu menulis scripts bash/shell."
     url: "https://ubuntu.com/server/docs"
 
   - name: Git
     icon: "images/skills/git.png"
-    summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+    summary: "berpengalaman dalam pengembangan berbasis Git. Sebagian besar, menggunakan Github. Tetapi, memiliki pengalaman bekerja dengan GitLab."
     url: "https://git-scm.com/doc"
 
   - name: Kubernetes
     icon: "images/skills/kubernetes.png"
-    summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for HPA."
+    summary: "Mampu menerapkan, mengelola aplikasi di Kubernetes. Berpengalaman dalam menulis kontrol untuk HPA."
     url: "https://kubernetes.io/docs/home/"
 
   - name: Network Automation
     icon: "images/skills/network.jpg"
-    summary: "Know basic Networking for setup and configuration."
+    summary: "Tahu dasar jaringan untuk pengaturan dan konfigurasi."
     url: "https://www.juniper.net/documentation/en_US/release-independent/automation/information-products/pathway-pages/index.html"
