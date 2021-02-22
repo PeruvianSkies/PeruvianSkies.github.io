@@ -14,14 +14,10 @@ company:
   name: dumbways.id (Talent)
   url: "https://dumbways.id"
 
-# your resume. this file path should be relative to you "static" directory
 resume: "files/resume.pdf"
 
-# a summary about you
 summary: 'Saya seorang DevOps Engineer dengan pengalaman langsung pada Server Linux yang mendukung, mengotomatiskan, dan mengoptimalkan penerapan pada AWS, memanfaatkan manajemen konfigurasi, CI / CD, dan proses DevOps.'
 
-# your social links
-# give as many as you want. use font-awesome for the icons.
 socialLinks:
   - name: Linkedin
     icon: "fab fa-linkedin"
@@ -69,10 +65,4 @@ softSkills:
 - name: Tanggung Jawab
   percentage: 80
   color: pink
-# you can also provide color code instead of pre-defined color name
-# - name: Example 1
-#   percentage: 75
-#   color: "#00adb5"
-# - name: Example 2
-#   percentage: 65
-#   color: "#8b8383"
+

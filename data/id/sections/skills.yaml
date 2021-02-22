@@ -8,8 +8,6 @@ section:
   # Can optionally hide the title in sections
   # hideTitle: true
 
-# Your Skills.
-# Give a summary of you each skill in the summary section.
 skills:
   - name: Ansible
     icon: "images/skills/ansible.png"

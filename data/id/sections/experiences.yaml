@@ -14,14 +14,10 @@ experiences:
       name: PT Adira Dinamika Multi Finance
       url: "https://www.adira.co.id/"
       location: Jakarta Barat
-      # company overview
-      # overview: The one of largest multi finance company in Indonesia.
     positions:
       - designation: Customers Relations Officer
         start: Apr 2018
-        # don't provide end date if you are currently working there. It will be replaced by "Present"
         end: Apr 2020
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Melakukan survey untuk NDS (Non Dealer Sales) dan melakukan penjualan terhadap beberapa produk NDS.
           - Memperluas jaringan penjualan NDS terhadap sumber order, lembaga atau organisasi masyarakat.
@@ -30,7 +26,6 @@ experiences:
       name: PT Sinqe Material Indonesia
       url: "http://www.cntopbright.com/products.html"
       location: Jakarta Barat
-      # overview: PreExample Co. is a gateway company to enter into Example co. So, nothing special here.
     positions:
       - designation: Marketing Specialist
         start: Jul 2014
@@ -42,7 +37,6 @@ experiences:
       name: PT Blue Bird Group
       url: "https://www.bluebirdgroup.com/"
       location: Jakarta Selatan
-      # overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
     positions:
       - designation: Assistant Group Head
         start: Apr 2012
@@ -55,7 +49,6 @@ experiences:
       name: PT Adira Dinamika Multi Finance
       url: "https://www.adira.co.id/"
       location: Tangerang
-      # overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
     positions:
       - designation: Credit Marketing Officer
         start: Feb 2010

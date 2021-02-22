@@ -6,21 +6,21 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
-# your designation
+# designation
 designation: DevOps Engineer
-# your company information
+# company information
 company:
   name: dumbways.id (Talent)
   url: "https://dumbways.id"
 
-# your resume. this file path should be relative to you "static" directory
+# Resume.
 resume: "files/resume.pdf"
 
-# a summary about you
+# a summary 
 summary: "I am DevOps Engineer With Linux Server hands-on experience supporting, automating, and optimizing mission critical deployment in AWS, leveraging configuration management, CI / CD, and DevOps processes."
 
-# your social links
-# give as many as you want. use font-awesome for the icons.
+# social links
+
 socialLinks:
   - name: Linkedin
     icon: "fab fa-linkedin"
@@ -46,9 +46,7 @@ socialLinks:
     icon: "fab fa-telegram"
     url: "https://t.me/Tianputra"
 
-# your soft skills
-# give the percentage between 50 to 100 with 5 intervals.
-# currently supported colors: blue, yellow, pink, green, sky, orange
+
 softSkills:
   - name: Comunication
     percentage: 90
