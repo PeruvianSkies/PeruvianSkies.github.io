@@ -11,6 +11,21 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: PT Meteor Inovasi Digital
+      url: "https://www.meteor.id/"
+      location: Tangerang Selatan
+      # company overview
+    positions:
+      - designation: DevOps Engineer
+        start: Feb 2021
+        # don't provide end date if you are currently working there. It will be replaced by "Present"
+        end: 
+        responsibilities:
+          - Working with developers to ensure the development process works as intended and running properly.
+          - Ensuring that the system is safe and protected from security threats or disasters.
+          - Building and configuring the insfrastructure for any application.
+
+  - company:
       name: PT Adira Dinamika Multi Finance
       url: "https://www.adira.co.id/"
       location: Jakarta Barat
