@@ -29,7 +29,7 @@ enableEmoji: true
 
 # Site parameters
 params:
-  background: "images/background1.jpg"
+  background: "assets/images/background1.jpg"
 
   # GitHub repo URL of your site
   gitRepo: https://github.com/PeruvianSkies/PeruvianSkies.github.io
