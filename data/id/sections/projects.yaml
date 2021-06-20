@@ -1,6 +1,6 @@
 # section information
 section:
-  name: ini Bukan Proyek
+  name: Semua Tentang Proyek
   id: projects
   enable: true
   weight: 4
@@ -18,6 +18,8 @@ buttons:
   filter: "perekrutan"
 - name: Hobi
   filter: "hobi"
+- name: Profesional
+  filter: "profesional"
 
 # your projects
 projects:
@@ -26,7 +28,7 @@ projects:
     role: DevOps
     timeline: "Nov 2020"
     repo: https://github.com/peruvianskies/Devops-final 
-    summary: Meluncurkan aplikasi dumbflix, menggunakan container docker dengan server AWS.
+    summary: Menerbitkan aplikasi dumbflix, menggunakan container docker dengan server AWS.
     tags: ["bootcamp", "cloud"]
 
   - name: dumbsound
@@ -35,7 +37,7 @@ projects:
     timeline: "Oct 2020"
     repo: https://github.com/PeruvianSkies/dumbways.id
     #url: ""
-    summary: Meluncurkan aplikasi dumbsound, menggunakan otomatisasi Ansible dengan server AWS dan VMware.
+    summary: Menerbitkan aplikasi dumbsound, menggunakan otomatisasi Ansible dengan server AWS dan VMware.
     tags: ["bootcamp", "academic"]
 
   - name: Codemi Test
@@ -55,7 +57,7 @@ projects:
     tags: ["perekrutan", "profesional"]
 
   - name: Scripting
-    logo: /images/sections/projects/bash-shell.png
+    logo: /images/sections/projects/bash.png
     role: Nothing
     timeline:
     repo: https://github.com/PeruvianSkies/Automation.aws/blob/master/automation.sh
@@ -69,3 +71,27 @@ projects:
     repo: https://github.com/PeruvianSkies/automation-playbook
     summary: Pedoman saya.
     tags: ["hobi", "server"]
+
+  - name: FastVid
+    logo: /images/sections/projects/fastvid.png
+    role: DevOps
+    timeline: "April 2021"
+    repo: https://thefv.id
+    summary: Menerbitkan dan memanage aplikasi Fastvid ke dalam cluster production, menggunakan Docker dan Kubernetes di Digitalocean Cloud Server.
+    tags: ["profesional", "cloud", "meteor"]
+
+  - name: Roar
+    logo: /images/sections/projects/roar.png
+    role: DevOps
+    timeline: "Mei 2021"
+    repo: https://roarjkt.com
+    summary: Menerbitkan dan memanage aplikasi Roar ke dalam cluster production, menggunakan kontainerisasi Docker.
+    tags: ["profesional", "cloud", "meteor"]
+
+  - name: Alfamind
+    logo: /images/sections/projects/alfamind.png
+    role: DevOps
+    timeline: "Maret 2021 - Sekarang"
+    repo: https://stage.portal-alfamind.wirgroup.net
+    summary: Menerbitkan, mengkonfigurasi dan memantau portal Alfamind ke dalam cluster staging, menggunakan Docker dan Kubernetes di Alibaba Cloud Server.
+    tags: ["profesional", "cloud", "meteor"]

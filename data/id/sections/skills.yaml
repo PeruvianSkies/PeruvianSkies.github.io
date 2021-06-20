@@ -21,7 +21,7 @@ skills:
 
   - name: Cloud Computing
     icon: "images/skills/cloud.png"
-    summary: "Bekerja dengan sebagian besar cloud server seperti AWS."
+    summary: "Bekerja dengan sebagian besar cloud server seperti AWS, Alibaca, GCP, Digitalocean."
     url: "https://docs.aws.amazon.com/index.html"
 
   - name: Docker
@@ -34,9 +34,9 @@ skills:
     summary: "Mampu membuat pengaturan dan konfigurasi menggunakan metrik Prometheus, dan Berpengalaman dengan menulis metrik exporters."
     url: "https://grafana.com/docs/"
 
-  - name: Ubuntu Server
+  - name: Linux Server
     icon: "images/skills/ubuntu.png"
-    summary: "Menggunakan ubuntu sebagai main server sistem. Mampu menulis scripts bash/shell."
+    summary: "Menggunakan Linux sebagai main server sistem seperti Ubuntu, Centos, RHEL, Fedora, dll. Mampu menulis scripts bash/shell."
     url: "https://ubuntu.com/server/docs"
 
   - name: Git

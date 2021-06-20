@@ -23,7 +23,7 @@ skills:
 
   - name: Cloud Computing
     icon: "images/skills/cloud.png"
-    summary: "Worked with most of the major clouds such as AWS."
+    summary: "Worked with most of the major clouds such as AWS, Alibaba, GCP, Digitalocean."
     url: "https://docs.aws.amazon.com/index.html"
 
   - name: Docker
@@ -36,9 +36,9 @@ skills:
     summary: "Capable of setup and configure with Prometheus metrics. Also, experienced with writing metric exporters."
     url: "https://grafana.com/docs/"
 
-  - name: Ubuntu Server
+  - name: Linux Server
     icon: "images/skills/ubuntu.png"
-    summary: "Using the main server operating system. Capable of writing bash/shell scripts."
+    summary: "Using the main server operating system such as Ubuntu, Centos, RHEL, Fedora, and many more. Capable of writing bash/shell scripts."
     url: "https://ubuntu.com/server/docs"
 
   - name: Git
