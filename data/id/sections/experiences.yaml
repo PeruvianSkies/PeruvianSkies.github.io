@@ -10,6 +10,19 @@ section:
 
 # Your experiences
 experiences:
+  - company: 
+      name: PT Jaya Agung Teknologi
+      url: https://www.jayaagung.tech/
+      location: Jakarta Utara
+    positions:
+      - designation: DevOps Engineer
+        start: July 2021
+        end: Sekarang
+        responsibilities:
+          - Merancang dan mengkonfigurasikan sebuah infrastruktur untuk tim developer.
+          - Mengkonfigurasi, merawat, dan memantau aplikasi bersistem manajemen dengan sebuah tool monitoring.
+          - Menulis dan merawat script kustomisasi untuk penerbitan otomatis dan meningkatkan sistem yang efisien untuk semua aplikasi. 
+  
   - company:
       name: PT Meteor Inovasi Digital
       url: "https://www.meteor.id/"
@@ -19,7 +32,7 @@ experiences:
       - designation: DevOps Engineer
         start: Feb 2021
         # don't provide end date if you are currently working there. It will be replaced by "Present"
-        end: Sekarang
+        end: Juni 2021
         responsibilities:
           - Bekerja sama dengan developer untuk memastikan proses pengembangan aplikasi berjalan sempurna.
           - Memastikan bahwa system telah aman dan menjaga dari ancaman keamanan atau bencana.

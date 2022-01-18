@@ -20,9 +20,19 @@ buttons:
   filter: "hobi"
 - name: Profesional
   filter: "profesional"
+- name: Open Source
+  filter: "open source"
 
 # your projects
 projects:
+  - name: CloudBoz
+    logo:  /images/sections/projects/cloudboz.png
+    role: DevOps
+    timeline: "Januari 2022"
+    repo: https://github.com/cloudboz
+    summary: CloudBoz adalah sebuah platform untuk memudahkan pengguna dalam mengelola server dan aplikasi.
+    tags: ["open source", "hobby"]
+
   - name: dumbflix
     logo: /images/sections/projects/logodum.png
     role: DevOps
