@@ -19,9 +19,11 @@ experiences:
         start: July 2021
         end:
         responsibilities:
-          - Design and configuring infrastructure for developers team.
-          - Configure, maintain, and monitoring application system management with monitoring tools.
+          - Design and implement infrastructure clustering system using Google Kubernetes Engine, Jenkins pipeline for Continuous Integration and ArgoCD for Continuous Delivery with Google Artifact Registry.
+          - Monitoring log and network performance application using Datadog, Prometheus and GCP Log Management
           - Write and maintain custom scripts for automation deployments and to increase system efficiency for any application.
+          - Working with developers to ensure the development process works as intended and running properly, from Dev environment, Staging and live Production.
+          - Manage infrastructure team in critical tasks such as production deployment, application patching, and hotfixes in the production environment by develop implement planning.
   
   - company:
       name: PT Meteor Inovasi Digital
@@ -37,6 +39,19 @@ experiences:
           - Working with developers to ensure the development process works as intended and running properly.
           - Ensuring that the system is safe and protected from security threats or disasters.
           - Building and configuring the insfrastructure for any application.
+
+  - company:
+      name: Freelancer
+      url: ""
+      location: Tangerang
+    positions:
+      - designation: TechOps Engineer
+        start: Apr 2020
+        end: Feb 2021
+        responsibilities:
+          - Writing Dockerfile, Ansible Playbook, Jenkinsfile, Kubernetes Manifest, etc.
+          - Create CICD Pipeline, monitoring tools like Prometheus & Grafana.
+          - Configuration instance Server at many Clouds Provider or on-premises servers.
 
   - company:
       name: PT Adira Dinamika Multi Finance
