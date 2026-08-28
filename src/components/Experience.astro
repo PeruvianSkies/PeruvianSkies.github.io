@@ -1,0 +1,68 @@
+---
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  experiences: {
+    company: { name: string; url: string; location: string };
+    positions: {
+      designation: string;
+      start: string;
+      end?: string | null;
+      responsibilities: string[];
+    }[];
+  }[];
+}
+
+const { title, experiences } = Astro.props;
+---
+
+<section id="experiences" class="mx-auto max-w-5xl scroll-mt-20 px-6 py-16 sm:py-20">
+  <p class="text-sm text-term-dim sm:text-base"><span class="text-prompt">$</span> git log --oneline --graph --author="me"</p>
+  <h2 class="mt-1 text-term-dim"># {title}</h2>
+
+  <ol class="mt-6 space-y-8 border-l border-panel-border pl-6">
+    {
+      experiences.map((exp) =>
+        exp.positions.map((position) => (
+          <li class="relative">
+            <span class="absolute -left-[1.65rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-prompt bg-bg" />
+
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-semibold">{position.designation}</h3>
+              <span class="text-xs text-term-dim">
+                {position.start} — {position.end || 'Present'}
+              </span>
+            </div>
+
+            <p class="text-sm text-term-dim">
+              {exp.company.url ? (
+                <a href={exp.company.url} target="_blank" rel="noopener noreferrer" class="hover:text-prompt">
+                  {exp.company.name}
+                </a>
+              ) : (
+                exp.company.name
+              )}
+              {exp.company.location && (
+                <>
+                  {' · '}
+                  {exp.company.location}
+                </>
+              )}
+            </p>
+
+            <ul class="mt-2 space-y-1 text-sm text-term-dim">
+              {position.responsibilities.map((item) => (
+                <li class="flex gap-2">
+                  <span class="text-prompt">-</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      )
+    }
+  </ol>
+</section>

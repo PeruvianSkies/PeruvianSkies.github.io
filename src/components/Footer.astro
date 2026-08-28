@@ -1,0 +1,43 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+import SocialIcon from './SocialIcon.astro';
+
+interface Props {
+  lang: Lang;
+  copyright: string;
+  email: string;
+  socialLinks: { name: string; icon: string; url: string }[];
+}
+
+const { lang, copyright, email, socialLinks } = Astro.props;
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-panel-border">
+  <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-10 text-sm text-term-dim sm:flex-row sm:justify-between">
+    <p># © {year} {copyright} <span class="cursor-blink">▍</span></p>
+
+    <div class="flex items-center gap-4">
+      <a href={`mailto:${email}`} class="hover:text-prompt">
+        <span class="text-prompt">$</span> {t('about.contactMe')}
+      </a>
+      <div class="flex items-center gap-3">
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.name}
+              class="grid h-9 w-9 place-items-center rounded-md text-term-dim transition-colors hover:text-prompt"
+            >
+              <SocialIcon name={link.name} class="h-4 w-4" />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>

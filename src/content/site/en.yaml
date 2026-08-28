@@ -1,0 +1,4 @@
+# NOTE: tahun copyright sekarang dihitung otomatis di Footer.astro (new Date().getFullYear()),
+# jadi field ini cuma menyimpan nama pemilik copyright-nya.
+copyright: "Tian Putra Nuhcahya"
+description: "Portfolio Tian Putra."

@@ -1,0 +1,71 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Header from './Header.astro';
+import Hero from './Hero.astro';
+import Skills from './Skills.astro';
+import Experience from './Experience.astro';
+import Projects from './Projects.astro';
+import Footer from './Footer.astro';
+import SectionDivider from './SectionDivider.astro';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const authorEntry = await getEntry('author', lang);
+const aboutEntry = await getEntry('about', lang);
+const skillsEntry = await getEntry('skills', lang);
+const experiencesEntry = await getEntry('experiences', lang);
+const projectsEntry = await getEntry('projects', lang);
+const siteEntry = await getEntry('site', lang);
+
+if (!authorEntry || !aboutEntry || !skillsEntry || !experiencesEntry || !projectsEntry || !siteEntry) {
+  throw new Error(`Missing content entry for locale "${lang}"`);
+}
+
+const author = authorEntry.data;
+const about = aboutEntry.data;
+const skills = skillsEntry.data;
+const experiences = experiencesEntry.data;
+const projects = projectsEntry.data;
+const site = siteEntry.data;
+
+const pageTitle = `${author.name} — ${about.designation}`;
+---
+
+<Layout lang={lang} title={pageTitle} description={site.description}>
+  <Header lang={lang} nickname={author.nickname} />
+
+  <main>
+    <Hero
+      lang={lang}
+      greeting={author.greeting}
+      name={author.name}
+      photo={author.image}
+      designation={about.designation}
+      company={about.company}
+      summary={about.summary}
+      resume={about.resume}
+      socialLinks={about.socialLinks}
+      softSkills={about.softSkills}
+    />
+
+    <SectionDivider lang={lang} labelKey="nav.experiences" />
+
+    <Experience lang={lang} title={experiences.section.name} experiences={experiences.experiences} />
+
+    <SectionDivider lang={lang} labelKey="nav.skills" />
+
+    <Skills lang={lang} title={skills.section.name} skills={skills.skills} />
+
+    <SectionDivider lang={lang} labelKey="nav.projects" />
+
+    <Projects lang={lang} title={projects.section.name} buttons={projects.buttons} projects={projects.projects} />
+  </main>
+
+  <Footer lang={lang} copyright={site.copyright} email={author.contactInfo.email} socialLinks={about.socialLinks} />
+</Layout>

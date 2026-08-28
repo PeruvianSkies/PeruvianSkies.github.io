@@ -1,0 +1,101 @@
+section:
+  name: All About Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+buttons:
+  - name: All
+    filter: "all"
+  - name: Bootcamp
+    filter: "bootcamp"
+  - name: Hiring Test
+    filter: "hiring"
+  - name: Hobby
+    filter: "hobby"
+  - name: Profesional
+    filter: "profesional"
+  - name: Open Source
+    filter: "open source"
+
+projects:
+  - name: CloudBoz
+    logo: "cloudboz.png"
+    role: DevOps
+    timeline: "Januari 2022"
+    repo: https://github.com/cloudboz
+    summary: CloudBoz is a platform that makes it easy for users to manage servers and applications.
+    tags: ["open source", "hobby"]
+
+  - name: dumbflix
+    logo: "logodum.png"
+    role: DevOps
+    timeline: "Nov 2020"
+    repo: https://github.com/peruvianskies/Devops-final
+    summary: Deploying dumbflix application, using docker container with AWS cloud server.
+    tags: ["bootcamp", "cloud"]
+
+  - name: dumbsound
+    logo: "iconplay.png"
+    role: DevOps
+    timeline: "Oct 2020"
+    repo: https://github.com/PeruvianSkies/dumbways.id
+    summary: Deploying dumbsound application, using Ansible automation with AWS server and VMware.
+    tags: ["bootcamp", "academic"]
+
+  - name: Codemi Test
+    role: Nothing
+    timeline: "Des 2020"
+    repo: https://github.com/PeruvianSkies/codemi
+    summary: Technical Test.
+    tags: ["hiring", "profesional"]
+
+  # NOTE: sumber asli menunjuk ke "no-code.png" yang tidak ada di assets gambar manapun
+  # (broken image dari situs Hugo lama) -- logo dikosongkan sampai kamu punya file penggantinya.
+  - name: Eigen Test
+    role: Nothing
+    timeline: "Jan 2021"
+    repo: https://gitlab.com/PeruvianSkies/eigentrimathema
+    summary: Technical test.
+    tags: ["hiring", "profesional"]
+
+  - name: Scripting
+    logo: "bash-shell.png"
+    role: Nothing
+    timeline:
+    repo: https://github.com/PeruvianSkies/Automation.aws/blob/master/automation.sh
+    summary: Script for automation install.
+    tags: ["hobby", "cloud"]
+
+  - name: Playbook
+    logo: "ansible.png"
+    role: Nothing
+    timeline:
+    repo: https://github.com/PeruvianSkies/automation-playbook
+    summary: My Playbook.
+    tags: ["hobby", "cloud"]
+
+  - name: FastVid
+    logo: "fastvid.png"
+    role: DevOps
+    timeline: "April 2021"
+    repo: https://thefv.id
+    summary: Deploying and managing Fastvid application to production cluster, using Docker and Kubernetes at Digitalocean Cloud Provider.
+    tags: ["profesional", "cloud"]
+
+  - name: Roar
+    logo: "roar.png"
+    role: DevOps
+    timeline: "Mei 2021"
+    repo: https://roarjkt.com
+    summary: Deploying and managing Roar application to production cluster, using Docker Containerization.
+    tags: ["profesional", "cloud"]
+
+  - name: Alfamind
+    logo: "alfamind.png"
+    role: DevOps
+    timeline: "March 2021 - Present"
+    repo: https://stage.portal-alfamind.wirgroup.net
+    summary: Deploying, Configuring and Monitoring Alfamind portal to staging cluster, using Docker and Kubernetes at Alibaba Cloud Provider.
+    tags: ["profesional", "cloud"]

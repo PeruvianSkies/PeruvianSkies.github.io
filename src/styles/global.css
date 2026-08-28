@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", monospace;
+
+  --color-accent-50: #ecfeff;
+  --color-accent-300: #67e8f9;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+  --color-accent-600: #0e7490;
+
+  /* Terminal palette -- overridden per-mode below, these are the light ("terminal paper") values */
+  --color-bg: #f6f5f2;
+  --color-panel: #ffffff;
+  --color-panel-border: #dedad2;
+  --color-term-text: #1c2128;
+  --color-term-dim: #5b6472;
+  --color-prompt: #15803d;
+  --color-warn: #92400e;
+}
+
+.dark {
+  --color-bg: #0b0f14;
+  --color-panel: #11161d;
+  --color-panel-border: #232935;
+  --color-term-text: #d5dbe3;
+  --color-term-dim: #7b8494;
+  --color-prompt: #7ee787;
+  --color-warn: #e5c07b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-mono);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-start infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+  }
+}

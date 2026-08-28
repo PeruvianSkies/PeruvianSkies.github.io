@@ -1,0 +1,21 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations, ui, defaultLang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  labelKey: keyof (typeof ui)[typeof defaultLang];
+}
+
+const { lang, labelKey } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="mx-auto max-w-5xl px-6">
+  <div class="relative flex items-center justify-center py-2" aria-hidden="true">
+    <div class="absolute inset-x-0 border-t border-panel-border"></div>
+    <span class="relative rounded-full border border-panel-border bg-panel px-4 py-1.5 text-xs text-term-dim">
+      <span class="text-prompt">$</span> {t(labelKey)}
+    </span>
+  </div>
+</div>
