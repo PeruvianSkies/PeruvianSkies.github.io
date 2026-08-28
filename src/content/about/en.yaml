@@ -1,0 +1,55 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+
+designation: DevOps Engineer
+company:
+  name: Jaya Agung Teknologi
+  url: "https://www.jayaagung.tech/"
+
+resume: "/files/resume-tian2026.pdf"
+
+summary: "I am DevOps Engineer With Linux Server hands-on experience supporting, automating, and optimizing mission critical deployment in several Cloud Provider, leveraging configuration management, Continuous Integration & Continuous Deployment (CI/CD), and DevOps processes."
+
+socialLinks:
+  - name: Linkedin
+    icon: "fab fa-linkedin"
+    url: "https://www.linkedin.com/in/tian-putra-nuhcahya/"
+  - name: Github
+    icon: "fab fa-github"
+    url: "https://www.github.com/PeruvianSkies"
+  - name: Gitlab
+    icon: "fab fa-gitlab"
+    url: "https://gitlab.com/PeruvianSkies"
+  - name: Email
+    icon: "fas fa-envelope"
+    url: "mailto:tianputra33@yahoo.com"
+  - name: Whatsapp
+    icon: "fab fa-whatsapp"
+    url: "https://api.whatsapp.com/send?phone=682120320330"
+  - name: Telegram
+    icon: "fab fa-telegram"
+    url: "https://t.me/Tianputra"
+
+softSkills:
+  - name: Comunication
+    percentage: 90
+    color: blue
+  - name: Team Work
+    percentage: 85
+    color: yellow
+  - name: Fast Learner
+    percentage: 80
+    color: green
+  - name: Hard Working
+    percentage: 85
+    color: orange
+  - name: Profesional
+    percentage: 85
+    color: sky
+  - name: Responsible
+    percentage: 80
+    color: pink

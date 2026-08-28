@@ -1,0 +1,126 @@
+section:
+  name: Pengalaman Kerja
+  id: experiences
+  enable: true
+  weight: 2
+  showOnNavbar: true
+
+experiences:
+  - company:
+      name: iForte Payment Infrastructure
+      url: ""
+      location: ""
+    positions:
+      - designation: DevOps Engineer Lead
+        start: Apr 2026
+        end:
+        responsibilities:
+          - Memimpin architecture review lintas tim untuk perubahan infrastruktur, mengevaluasi eksposur payload PCI-DSS dan menyusun urutannya sesuai roadmap platform.
+          - Menjadi technical point of contact DevOps/security untuk audit PCI-DSS dan ISO 27001 — mereview evidence dan menentukan remediation action sebelum presentasi ke auditor.
+          - Memegang proses post-incident RCA sebagai eskalasi untuk insiden major; mendorong roadmap reliability (SRE) platform di seluruh cluster GKE DC/DR/Tools, melapor langsung ke leadership.
+          - Mendorong adopsi FinOps untuk workload GKE lewat framework cost visibility Crawl-Walk-Run, termasuk POC tooling yang dipimpin tim dan dipresentasikan ke management.
+          - Menstandarkan SOP/governance guardrail yang menyeimbangkan kecepatan delivery dengan risiko akses produksi di lingkungan yang diregulasi PCI-DSS.
+          - Mentoring dan mengarahkan engineer DevOps secara teknis, termasuk onboarding new hire dan ikut serta dalam technical interview.
+      - designation: Senior DevOps Engineer
+        start: Okt 2022
+        end: Apr 2026
+        responsibilities:
+          - Merancang dan mengoperasikan platform Kubernetes (GKE) multi-cluster (DC/DR/Tools) dengan private networking yang aman.
+          - Membangun ekosistem CI/CD dan GitOps yang aman (Jenkins, ArgoCD, Kustomize) untuk deployment yang terkontrol dan auditable.
+          - Menerapkan shift-left security di CI/CD — SAST (Horusec), SCA/image scanning (Trivy), dikonsolidasikan lewat SonarQube; menegakkan TLS dan monitoring SIEM (Wazuh).
+          - Merancang cloud networking, segmentasi VPC, routing ILB, dan integrasi Fortinet untuk jalur traffic yang aman.
+          - Membangun observability yang komprehensif menggunakan Prometheus, Grafana, Wazuh, ELK, dan Kafka logging.
+          - Berkolaborasi erat dengan tim Backend dan Compliance; secara informal membimbing DevOps engineer junior & middle.
+          - "Key achievement: migrasi microservices payment kritikal dari VM/Docker ke Kubernetes (GKE) dengan strategi zero-downtime dan rollback-safe."
+          - "Key achievement: merancang dan menerapkan platform GKE multi-cluster dengan private networking, integrasi Fortinet, segmentasi selaras PCI, dan routing ILB yang aman."
+          - "Key achievement: membangun infrastruktur Jenkins dengan backend PostgreSQL, GCS Fuse, dan SSD storage; menstandarkan pipeline CI/CD untuk meningkatkan kecepatan delivery dan kesiapan audit."
+          - "Key achievement: menerapkan siklus GitOps penuh (Bitbucket → Jenkins → ArgoCD + Kustomize), menjaga governance, traceability, dan konsistensi deployment."
+          - "Key achievement: memperkuat postur keamanan lewat korelasi SIEM, TLS hardening, dan vulnerability scanning berkelanjutan."
+          - "Key achievement: membangun observability stack end-to-end, meningkatkan visibilitas insiden dan waktu recovery secara signifikan."
+          - "Key achievement: menstandarkan template onboarding Kubernetes, memangkas waktu provisioning dari hitungan jam jadi menit."
+
+  - company:
+      name: PT Jaya Agung Teknologi
+      url: https://www.jayaagung.tech/
+      location: Jakarta Utara
+    positions:
+      - designation: Senior DevOps Engineer
+        start: July 2021
+        end: Okt 2022
+        responsibilities:
+          - Merancang dan mengimplementasikan sistem clustering infrastruktur menggunakan Google Kubernetes Engine, pipeline Jenkins untuk Continuous Integration dan ArgoCD.
+          - Memantau log dan performa jaringan aplikasi menggunakan Datadog, Prometheus, dan GCP Log Management.
+          - Mengelola tim infrastruktur dalam tugas-tugas kritikal seperti production deployment, application patching, dan hotfix di production environment dengan menyusun perencanaan implementasi.
+
+  - company:
+      name: PT Meteor Inovasi Digital
+      url: "https://www.meteor.id/"
+      location: Tangerang Selatan
+    positions:
+      - designation: DevOps Engineer
+        start: Feb 2021
+        end: July 2021
+        responsibilities:
+          - Bekerja sama dengan developer untuk memastikan proses pengembangan berjalan sesuai rencana, sambil membangun dan mengkonfigurasi infrastruktur untuk tiap aplikasi.
+          - Memastikan cluster microservices maupun Cloud Server aman dan terlindungi dari ancaman keamanan atau bencana.
+
+  - company:
+      name: Freelance
+      url: ""
+      location: Tangerang
+    positions:
+      - designation: TechOps Engineer
+        start: Apr 2020
+        end: Feb 2021
+        responsibilities:
+          - Menulis Dockerfile, Ansible Playbook, Jenkinsfile, Kubernetes Manifest, dll.
+          - Membuat CICD Pipeline, tools monitoring seperti Prometheus & Grafana.
+          - Konfigurasi instance Server di banyak Cloud Provider atau server on-premise.
+
+  - company:
+      name: PT Adira Dinamika Multi Finance
+      url: "https://www.adira.co.id/"
+      location: Jakarta Barat
+    positions:
+      - designation: Customers Relations Officer
+        start: Apr 2018
+        end: Apr 2020
+        responsibilities:
+          - Melakukan survey untuk NDS (Non Dealer Sales) dan melakukan penjualan terhadap beberapa produk NDS.
+          - Memperluas jaringan penjualan NDS terhadap sumber order, lembaga atau organisasi masyarakat.
+
+  - company:
+      name: PT Sinqe Material Indonesia
+      url: "http://www.cntopbright.com/products.html"
+      location: Jakarta Barat
+    positions:
+      - designation: Marketing Specialist
+        start: Jul 2014
+        end: Oct 2017
+        responsibilities:
+          - Mencari dan mengembangkan ide untuk kampanye pemasaran kreatif.
+          - Melakukan tugas individu dari rencana marketing yang telah di tetapkan.
+
+  - company:
+      name: PT Blue Bird Group
+      url: "https://www.bluebirdgroup.com/"
+      location: Jakarta Selatan
+    positions:
+      - designation: Assistant Group Head
+        start: Apr 2012
+        end: Mar 2014
+        responsibilities:
+          - Memberikan estimasi terhadap kerusakan mobil dengan laporan analisa dan membuat jam kerja mekanik.
+          - Membuat laporan harian.
+
+  - company:
+      name: PT Adira Dinamika Multi Finance
+      url: "https://www.adira.co.id/"
+      location: Tangerang
+    positions:
+      - designation: Credit Marketing Officer
+        start: Feb 2010
+        end: Mar 2012
+        responsibilities:
+          - Merencanakan dan melaksanakan suatu inisiatif terhadap pasar yang sudah di targetkan melalui sumber order.
+          - Menjaga hubungan baik dengan baik dengan sumber order.
