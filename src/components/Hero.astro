@@ -4,7 +4,7 @@ import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import { authorPhotos } from '../lib/images';
 import SocialIcon from './SocialIcon.astro';
-import TerminalWindow from './TerminalWindow.astro';
+import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
@@ -16,115 +16,105 @@ interface Props {
   summary: string;
   resume: string;
   socialLinks: { name: string; icon: string; url: string }[];
-  softSkills: { name: string; percentage: number; color: string }[];
+  stats: { yearsExperience: string; projectsCount: number; companiesCount: number; skillsCount: number };
 }
 
-const { lang, greeting, name, photo, designation, company, summary, resume, socialLinks, softSkills } = Astro.props;
+const { lang, greeting, name, photo, designation, company, summary, resume, socialLinks, stats } = Astro.props;
 const t = useTranslations(lang);
 
 const photoImage = authorPhotos.get(photo);
 
-const barColor: Record<string, string> = {
-  blue: 'bg-blue-500',
-  yellow: 'bg-yellow-500',
-  green: 'bg-emerald-500',
-  orange: 'bg-orange-500',
-  sky: 'bg-sky-500',
-  pink: 'bg-pink-500'
-};
+const statItems = [
+  { value: stats.yearsExperience, label: t('stats.years') },
+  { value: `${stats.projectsCount}+`, label: t('stats.projects') },
+  { value: `${stats.companiesCount}`, label: t('stats.companies') },
+  { value: `${stats.skillsCount}+`, label: t('stats.skills') }
+];
 ---
 
-<section id="about" class="mx-auto max-w-5xl scroll-mt-20 px-6 py-16 sm:py-20">
-  <TerminalWindow title="tian@site:~">
-    <div class="space-y-8 text-sm sm:text-base">
-      <div>
-        <p class="text-term-dim"><span class="text-prompt">$</span> neofetch</p>
-        <div class="mt-3 flex items-start gap-5">
-          {
-            photoImage && (
-              <Image
-                src={photoImage}
-                alt={name}
-                width={112}
-                height={112}
-                loading="eager"
-                fetchpriority="high"
-                class="h-20 w-20 shrink-0 rounded-md object-cover ring-2 ring-prompt/30 sm:h-28 sm:w-28"
-              />
-            )
-          }
-          <div>
-            <p class="text-prompt">{greeting}</p>
-            <h1 class="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{name}</h1>
-            <p class="mt-1 text-term-dim">
-              {designation} @{' '}
-              {company.url ? (
-                <a href={company.url} target="_blank" rel="noopener noreferrer" class="hover:text-prompt">
-                  {company.name}
-                </a>
-              ) : (
-                company.name
-              )}
-            </p>
-          </div>
-        </div>
-      </div>
+<section id="about" class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-accent-500/10 via-accent-500/5 to-bg"></div>
+  <div class="bg-grid absolute inset-0"></div>
+  <SectionWatermark text="DevSecOps" topClass="top-16" sizeClass="text-[14vw] sm:text-[7vw]" />
 
-      <div>
-        <p class="text-term-dim"><span class="text-prompt">$</span> cat about.txt</p>
-        <p class="mt-2 max-w-2xl text-term-dim">{summary}</p>
-      </div>
+  <div class="relative mx-auto min-h-[100svh] max-w-[100rem] px-6 pt-16 pb-12 lg:pb-0">
+    <div class="mt-[calc(14vw+24px)] sm:mt-[calc(7vw+24px)] lg:mt-0 lg:translate-y-[calc(7vw+16px)] lg:max-w-xl [@media(min-width:1440px)_and_(max-height:850px)]:max-w-2xl">
+      <p class="font-semibold text-prompt">{greeting}</p>
+      <h1 class="mt-1 text-5xl leading-[0.95] font-black tracking-tight italic sm:text-6xl">{name}</h1>
+      <p class="mt-3 text-xl font-extrabold tracking-tight text-term-dim sm:text-2xl">
+        {designation} @{' '}
+        {company.url ? (
+          <a href={company.url} target="_blank" rel="noopener noreferrer" class="text-prompt hover:underline">
+            {company.name}
+          </a>
+        ) : (
+          company.name
+        )}
+      </p>
 
-      <div>
-        <p class="text-term-dim"><span class="text-prompt">$</span> ls socials/</p>
-        <div class="mt-3 flex flex-wrap items-center gap-3">
-          {
-            socialLinks.map((link) => (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.name}
-                class="grid h-9 w-9 place-items-center rounded-md border border-panel-border text-term-dim transition-colors hover:border-prompt hover:text-prompt"
-              >
-                <SocialIcon name={link.name} class="h-4 w-4" />
-              </a>
-            ))
-          }
-        </div>
-      </div>
+      <p class="mt-4 max-w-lg lg:max-w-none text-term-dim">{summary}</p>
 
-      <div>
-        <p class="text-term-dim"><span class="text-prompt">$</span> ./resume.sh --download</p>
+      <div class="mt-5 flex flex-wrap gap-3">
         <a
           href={resume}
           download
-          class="mt-2 inline-block rounded-md bg-prompt px-4 py-2 text-sm font-semibold text-bg transition-opacity hover:opacity-85"
+          class="rounded-full bg-prompt px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
         >
-          {t('about.downloadResume')}
+          {t('about.downloadResume')} →
+        </a>
+        <a
+          href={`mailto:${socialLinks.find((s) => s.name.toLowerCase() === 'email')?.url.replace('mailto:', '') ?? ''}`}
+          class="rounded-full border border-panel-border px-6 py-3 text-sm font-semibold transition-colors hover:border-prompt hover:text-prompt"
+        >
+          {t('about.contactMe')}
         </a>
       </div>
 
-      <div>
-        <p class="text-term-dim"><span class="text-prompt">$</span> cat soft-skills.log</p>
-        <div class="mt-3 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-          {
-            softSkills.map((skill) => (
-              <div>
-                <div class="mb-1 flex justify-between text-xs">
-                  <span class="text-term-dim"># {skill.name}</span>
-                  <span class="text-term-dim">{skill.percentage}%</span>
-                </div>
-                <div class="h-1.5 overflow-hidden rounded-full bg-panel-border">
-                  <div class={`h-full rounded-full ${barColor[skill.color] ?? 'bg-prompt'}`} style={`width: ${skill.percentage}%`} />
-                </div>
-              </div>
-            ))
-          }
-        </div>
+      <p class="mt-6 text-xs font-bold tracking-widest text-term-dim uppercase">Follow Me</p>
+      <div class="mt-2 flex flex-wrap items-center gap-3">
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.name}
+              class="grid h-10 w-10 place-items-center rounded-full border border-panel-border text-term-dim transition-colors hover:border-prompt hover:text-prompt"
+            >
+              <SocialIcon name={link.name} class="h-4 w-4" />
+            </a>
+          ))
+        }
       </div>
-
-      <p class="text-term-dim"><span class="text-prompt">$</span> <span class="cursor-blink">▍</span></p>
     </div>
-  </TerminalWindow>
+
+    {
+      photoImage && (
+        <div class="mt-10 flex justify-center lg:absolute lg:inset-y-0 lg:right-6 lg:mt-0 lg:items-end lg:justify-end">
+          <Image
+            src={photoImage}
+            alt={name}
+            width={1150}
+            height={1190}
+            loading="eager"
+            fetchpriority="high"
+            class="aspect-[1150/1190] w-64 object-contain object-bottom sm:w-80 lg:h-full lg:w-auto lg:max-h-[92vh]"
+          />
+        </div>
+      )
+    }
+  </div>
+
+  <div class="relative mx-auto max-w-[100rem] px-6 pb-16 sm:pb-20">
+    <div class="grid grid-cols-2 gap-6 border-t border-panel-border pt-8 sm:grid-cols-4">
+      {
+        statItems.map((stat) => (
+          <div class="text-center">
+            <p class="text-3xl font-black text-prompt sm:text-4xl">{stat.value}</p>
+            <p class="mt-1 text-xs font-medium text-term-dim sm:text-sm">{stat.label}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>

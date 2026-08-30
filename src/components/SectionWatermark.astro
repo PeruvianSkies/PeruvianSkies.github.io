@@ -1,0 +1,18 @@
+---
+interface Props {
+  text: string;
+  topClass?: string;
+  sizeClass?: string;
+}
+
+const { text, topClass = 'top-0', sizeClass = 'text-[18vw] sm:text-[12vw]' } = Astro.props;
+---
+
+<div
+  class={`pointer-events-none absolute inset-x-0 ${topClass} flex justify-center overflow-hidden select-none`}
+  aria-hidden="true"
+>
+  <span class={`whitespace-nowrap font-sans font-black uppercase leading-none text-term-dim/15 ${sizeClass}`}>
+    {text}
+  </span>
+</div>
