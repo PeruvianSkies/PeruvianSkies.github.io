@@ -52,16 +52,26 @@ const about = defineCollection({
   })
 });
 
+const skillItem = z.object({
+  name: z.string(),
+  icon: z.string().optional(),
+  summary: z.string(),
+  url: z.string()
+});
+
+// Used as a fallback icon for skills without a bundled logo file (src/assets/images/skills/) --
+// see CategoryIcon.astro for the actual SVG per key.
+const genericIconKey = z.enum(['cloud', 'containers', 'cicd', 'security', 'finops', 'observability', 'systems', 'data']);
+
 const skills = defineCollection({
   loader: glob({ pattern: '*.yaml', base: './src/content/skills' }),
   schema: z.object({
     section: sectionMeta,
-    skills: z.array(
+    categories: z.array(
       z.object({
         name: z.string(),
-        icon: z.string(),
-        summary: z.string(),
-        url: z.string()
+        genericIcon: genericIconKey,
+        skills: z.array(skillItem)
       })
     )
   })

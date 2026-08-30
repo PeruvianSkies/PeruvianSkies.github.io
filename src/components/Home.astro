@@ -7,7 +7,6 @@ import Skills from './Skills.astro';
 import Experience from './Experience.astro';
 import Projects from './Projects.astro';
 import Footer from './Footer.astro';
-import SectionDivider from './SectionDivider.astro';
 import type { Lang } from '../i18n/ui';
 
 interface Props {
@@ -35,6 +34,13 @@ const projects = projectsEntry.data;
 const site = siteEntry.data;
 
 const pageTitle = `${author.name} — ${about.designation}`;
+
+const stats = {
+  yearsExperience: '5+',
+  projectsCount: projects.projects.length,
+  companiesCount: experiences.experiences.length,
+  skillsCount: skills.categories.reduce((total, category) => total + category.skills.length, 0)
+};
 ---
 
 <Layout lang={lang} title={pageTitle} description={site.description}>
@@ -51,18 +57,11 @@ const pageTitle = `${author.name} — ${about.designation}`;
       summary={about.summary}
       resume={about.resume}
       socialLinks={about.socialLinks}
-      softSkills={about.softSkills}
     />
 
-    <SectionDivider lang={lang} labelKey="nav.experiences" />
+    <Skills lang={lang} categories={skills.categories} softSkills={about.softSkills} stats={stats} />
 
     <Experience lang={lang} title={experiences.section.name} experiences={experiences.experiences} />
-
-    <SectionDivider lang={lang} labelKey="nav.skills" />
-
-    <Skills lang={lang} title={skills.section.name} skills={skills.skills} />
-
-    <SectionDivider lang={lang} labelKey="nav.projects" />
 
     <Projects lang={lang} title={projects.section.name} buttons={projects.buttons} projects={projects.projects} />
   </main>

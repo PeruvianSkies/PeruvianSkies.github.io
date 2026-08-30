@@ -1,42 +1,105 @@
 ---
 import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
 import { skillIcons } from '../lib/images';
+import CategoryIcon from './CategoryIcon.astro';
+import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
-  title: string;
-  skills: { name: string; icon: string; summary: string; url: string }[];
+  categories: {
+    name: string;
+    genericIcon: string;
+    skills: { name: string; icon?: string; summary: string; url: string }[];
+  }[];
+  softSkills: { name: string; percentage: number; color: string }[];
+  stats: { yearsExperience: string; projectsCount: number; companiesCount: number; skillsCount: number };
 }
 
-const { title, skills } = Astro.props;
+const { lang, categories, softSkills, stats } = Astro.props;
+const t = useTranslations(lang);
+
+const statItems = [
+  { value: stats.yearsExperience, label: t('stats.years') },
+  { value: `${stats.projectsCount}+`, label: t('stats.projects') },
+  { value: `${stats.companiesCount}`, label: t('stats.companies') },
+  { value: `${stats.skillsCount}+`, label: t('stats.skills') }
+];
+
+// Data stays organized by category (for maintainability + the generic per-category icon
+// fallback), but renders as a single flat grid -- grouping/headings made the section feel
+// heavier than intended.
+const allSkills = categories.flatMap((category) =>
+  category.skills.map((skill) => ({ ...skill, genericIcon: category.genericIcon }))
+);
+
+const barColor: Record<string, string> = {
+  blue: 'bg-blue-500',
+  yellow: 'bg-amber-500',
+  green: 'bg-emerald-500',
+  orange: 'bg-orange-500',
+  sky: 'bg-sky-500',
+  pink: 'bg-pink-500'
+};
 ---
 
-<section id="skills" class="mx-auto max-w-5xl scroll-mt-20 px-6 py-16 sm:py-20">
-  <p class="text-sm text-term-dim sm:text-base"><span class="text-prompt">$</span> cat skills.yaml</p>
-  <h2 class="mt-1 text-term-dim"># {title}</h2>
+<section id="skills" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 pt-6 pb-16 sm:pt-8 sm:pb-20">
+  <SectionWatermark text="Skills" />
 
-  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="relative mx-auto mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
     {
-      skills.map((skill) => {
-        const icon = skillIcons.get(skill.icon);
+      statItems.map((stat) => (
+        <div class="text-center">
+          <p class="text-3xl font-black text-prompt sm:text-4xl">{stat.value}</p>
+          <p class="mt-1 text-xs font-medium text-term-dim sm:text-sm">{stat.label}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="relative mt-10 grid grid-cols-3 gap-x-6 gap-y-8 border-t border-panel-border pt-10 sm:grid-cols-4 lg:grid-cols-5">
+    {
+      allSkills.map((skill) => {
+        const icon = skill.icon ? skillIcons.get(skill.icon) : undefined;
         return (
-          <a
-            href={skill.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group rounded-lg border border-panel-border bg-panel p-5 transition-colors hover:border-prompt"
-          >
-            <div class="flex items-center gap-3">
-              {icon && <Image src={icon} alt={skill.name} width={32} height={32} class="h-8 w-8 rounded object-contain" />}
-              <h3 class="font-semibold group-hover:text-prompt">
-                <span class="text-term-dim">$</span> {skill.name}
-              </h3>
-            </div>
-            <p class="mt-3 text-sm text-term-dim">{skill.summary}</p>
-          </a>
+          <div class="group flex cursor-default flex-col items-center gap-2 p-3 text-center transition-transform duration-300 ease-out hover:-translate-y-1.5">
+            {icon ? (
+              <Image
+                src={icon}
+                alt={skill.name}
+                width={80}
+                class="h-9 w-9 object-contain transition-transform duration-300 ease-out group-hover:-rotate-6 group-hover:scale-[1.15] sm:h-10 sm:w-10"
+              />
+            ) : (
+              <CategoryIcon
+                name={skill.genericIcon}
+                class="h-9 w-9 text-term-dim transition-transform duration-300 ease-out group-hover:-rotate-6 group-hover:scale-[1.15] sm:h-10 sm:w-10"
+              />
+            )}
+            <span class="text-sm font-medium text-term-dim transition-colors duration-300 group-hover:text-prompt">{skill.name}</span>
+          </div>
         );
       })
     }
+  </div>
+
+  <div class="relative mx-auto mt-16 max-w-2xl">
+    <h3 class="text-center text-xs font-bold tracking-widest text-term-dim uppercase">Soft Skills</h3>
+    <div class="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+      {
+        softSkills.map((skill) => (
+          <div>
+            <div class="mb-1 flex justify-between text-sm">
+              <span class="font-medium">{skill.name}</span>
+              <span class="text-term-dim">{skill.percentage}%</span>
+            </div>
+            <div class="h-2 overflow-hidden rounded-full bg-panel-border">
+              <div class={`h-full rounded-full ${barColor[skill.color] ?? 'bg-prompt'}`} style={`width: ${skill.percentage}%`} />
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
