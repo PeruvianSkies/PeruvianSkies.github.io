@@ -93,7 +93,8 @@ const experiences = defineCollection({
             designation: z.string(),
             start: z.string(),
             end: z.string().nullable().optional(),
-            responsibilities: z.array(z.string())
+            responsibilities: z.array(z.string()),
+            achievements: z.array(z.string()).optional()
           })
         )
       })
@@ -105,21 +106,16 @@ const projects = defineCollection({
   loader: glob({ pattern: '*.yaml', base: './src/content/projects' }),
   schema: z.object({
     section: sectionMeta,
-    buttons: z.array(
-      z.object({
-        name: z.string(),
-        filter: z.string()
-      })
-    ),
     projects: z.array(
       z.object({
         name: z.string(),
         logo: z.string().optional(),
         role: z.string(),
         timeline: z.string().nullable().optional(),
-        repo: z.string(),
+        repo: z.string().optional(),
         summary: z.string(),
-        tags: z.array(z.string())
+        skills: z.array(z.string()),
+        skillsNote: z.string().optional()
       })
     )
   })

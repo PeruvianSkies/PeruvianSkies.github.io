@@ -5,51 +5,51 @@ section:
   weight: 1
   showOnNavbar: true
 
-designation: DevOps Engineer
+designation: DevOps Engineer Lead
 company:
-  name: Jaya Agung Teknologi
-  url: "https://www.jayaagung.tech/"
+  name: iFortepay
+  url: "https://ifortepay.id/"
 
 resume: "/files/resume-tian2026.pdf"
 
-summary: 'Saya seorang DevOps Engineer dengan pengalaman langsung pada Server Linux yang mendukung, mengotomatiskan, dan mengoptimalkan penerapan pada beberapa penyedia virtual server, memanfaatkan manajemen konfigurasi, Integrasi berkelanjutan & Pengembangan berkelanjutan (CI/CD), dan proses DevOps.'
+summary: 'Technical lead dengan pengalaman 5+ tahun di DevOps/platform engineering, saat ini memimpin strategi dan governance DevOps untuk platform pembayaran fintech yang diregulasi PCI DSS, dengan fokus DevSecOps yang kuat (shift-left security, SAST/SCA, SIEM). Memegang cross-team architecture review, adopsi FinOps, dan audit PCI-DSS/ISO 27001, di samping hands-on ownership infrastruktur Kubernetes (GKE) multi-cluster, GitOps, dan observability. Berpengalaman mentoring engineer dan menstandarkan SOP/governance guardrail untuk menyeimbangkan kecepatan delivery dengan risiko akses produksi.'
 
 socialLinks:
-  - name: Linkedin
-    icon: "fab fa-linkedin"
-    url: "https://www.linkedin.com/in/tian-putra-nuhcahya/"
-  - name: Github
-    icon: "fab fa-github"
-    url: "https://www.github.com/PeruvianSkies"
-  - name: Gitlab
-    icon: "fab fa-gitlab"
-    url: "https://gitlab.com/PeruvianSkies"
-  - name: Email
-    icon: "fas fa-envelope"
-    url: "mailto:tianputra33@yahoo.com"
-  - name: Whatsapp
-    icon: "fab fa-whatsapp"
-    url: "https://api.whatsapp.com/send?phone=682120320330"
-  - name: Telegram
-    icon: "fab fa-telegram"
-    url: "https://t.me/Tianputra"
+- name: Linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/tian-putra-nuhcahya/"
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/PeruvianSkies"
+- name: Gitlab
+  icon: "fab fa-gitlab"
+  url: "https://gitlab.com/PeruvianSkies"
+- name: Email
+  icon: "fas fa-envelope"
+  url: "mailto:tianputra33@yahoo.com"
+- name: Whatsapp
+  icon: "fab fa-whatsapp"
+  url: "https://api.whatsapp.com/send?phone=682120320330"
+- name: Telegram
+  icon: "fab fa-telegram"
+  url: "https://t.me/Tianputra"
 
 softSkills:
-  - name: Komunikasi
-    percentage: 90
-    color: blue
-  - name: Kerja Tim
-    percentage: 85
-    color: yellow
-  - name: Mudah Paham
-    percentage: 80
-    color: green
-  - name: Pekerja Keras
-    percentage: 85
-    color: orange
-  - name: Profesional
-    percentage: 85
-    color: sky
-  - name: Tanggung Jawab
-    percentage: 80
-    color: pink
+- name: Komunikasi
+  percentage: 90
+  color: blue
+- name: Kerja Tim
+  percentage: 85
+  color: yellow
+- name: Mentoring & Kepemimpinan
+  percentage: 80
+  color: green
+- name: Manajemen Stakeholder
+  percentage: 85
+  color: orange
+- name: Profesional
+  percentage: 85
+  color: sky
+- name: Tanggung Jawab
+  percentage: 80
+  color: pink

@@ -15,29 +15,38 @@ const t = useTranslations(lang);
 const year = new Date().getFullYear();
 ---
 
-<footer class="border-t border-panel-border">
-  <div class="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-10 text-sm text-term-dim sm:flex-row sm:justify-between">
-    <p># © {year} {copyright} <span class="cursor-blink">▍</span></p>
+<footer class="relative overflow-hidden border-t border-panel-border bg-gradient-to-b from-accent-500/5 to-bg">
+  <div class="bg-grid absolute inset-0"></div>
 
-    <div class="flex items-center gap-4">
-      <a href={`mailto:${email}`} class="hover:text-prompt">
-        <span class="text-prompt">$</span> {t('about.contactMe')}
-      </a>
-      <div class="flex items-center gap-3">
-        {
-          socialLinks.map((link) => (
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.name}
-              class="grid h-9 w-9 place-items-center rounded-md text-term-dim transition-colors hover:text-prompt"
-            >
-              <SocialIcon name={link.name} class="h-4 w-4" />
-            </a>
-          ))
-        }
-      </div>
+  <div class="relative mx-auto max-w-2xl px-6 py-20 text-center">
+    <h2 class="text-3xl font-black tracking-tight sm:text-4xl">{t('about.contactMe')}</h2>
+    <p class="mt-4 text-term-dim">{copyright}</p>
+
+    <a
+      href={`mailto:${email}`}
+      class="mt-8 inline-block rounded-full bg-prompt px-7 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+    >
+      {email}
+    </a>
+
+    <div class="mt-8 flex items-center justify-center gap-3">
+      {
+        socialLinks.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.name}
+            class="grid h-10 w-10 place-items-center rounded-full border border-panel-border text-term-dim transition-colors hover:border-prompt hover:text-prompt"
+          >
+            <SocialIcon name={link.name} class="h-4 w-4" />
+          </a>
+        ))
+      }
     </div>
+  </div>
+
+  <div class="relative border-t border-panel-border px-6 py-5 text-center text-xs text-term-dim">
+    © {year} {copyright}
   </div>
 </footer>

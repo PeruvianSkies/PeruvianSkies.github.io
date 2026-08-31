@@ -1,5 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
@@ -11,58 +13,79 @@ interface Props {
       start: string;
       end?: string | null;
       responsibilities: string[];
+      achievements?: string[];
     }[];
   }[];
 }
 
-const { title, experiences } = Astro.props;
+const { lang, title, experiences } = Astro.props;
+const t = useTranslations(lang);
+
+const entries = experiences.flatMap((exp) => exp.positions.map((position) => ({ company: exp.company, position })));
 ---
 
-<section id="experiences" class="mx-auto max-w-5xl scroll-mt-20 px-6 py-16 sm:py-20">
-  <p class="text-sm text-term-dim sm:text-base"><span class="text-prompt">$</span> git log --oneline --graph --author="me"</p>
-  <h2 class="mt-1 text-term-dim"># {title}</h2>
+<section id="experiences" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 py-16 sm:py-20">
+  <SectionWatermark text="Journey" />
 
-  <ol class="mt-6 space-y-8 border-l border-panel-border pl-6">
+  <div class="relative mt-20 border-t border-panel-border" />
+
+  <ol class="relative mx-auto mt-10 max-w-2xl space-y-6">
     {
-      experiences.map((exp) =>
-        exp.positions.map((position) => (
-          <li class="relative">
-            <span class="absolute -left-[1.65rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-prompt bg-bg" />
-
+      entries.map(({ company, position }) => (
+        <li class="relative">
+          <div
+            class={`rounded-2xl border border-l-4 bg-panel p-5 shadow-sm ${
+              position.end ? 'border-panel-border border-l-term-dim/30' : 'border-panel-border border-l-prompt'
+            }`}
+          >
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 class="font-semibold">{position.designation}</h3>
-              <span class="text-xs text-term-dim">
+              <h3 class="font-bold">{position.designation}</h3>
+              <span class="text-xs font-medium text-term-dim">
                 {position.start} — {position.end || 'Present'}
               </span>
             </div>
 
             <p class="text-sm text-term-dim">
-              {exp.company.url ? (
-                <a href={exp.company.url} target="_blank" rel="noopener noreferrer" class="hover:text-prompt">
-                  {exp.company.name}
+              {company.url ? (
+                <a href={company.url} target="_blank" rel="noopener noreferrer" class="hover:text-prompt">
+                  {company.name}
                 </a>
               ) : (
-                exp.company.name
+                company.name
               )}
-              {exp.company.location && (
+              {company.location && (
                 <>
                   {' · '}
-                  {exp.company.location}
+                  {company.location}
                 </>
               )}
             </p>
 
-            <ul class="mt-2 space-y-1 text-sm text-term-dim">
+            <ul class="mt-3 space-y-1.5 text-sm text-term-dim">
               {position.responsibilities.map((item) => (
                 <li class="flex gap-2">
-                  <span class="text-prompt">-</span>
+                  <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-term-dim" />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-          </li>
-        ))
-      )
+
+            {position.achievements && position.achievements.length > 0 && (
+              <div class="mt-4">
+                <p class="text-xs font-bold tracking-wide text-prompt uppercase">{t('experience.keyAchievements')}</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-term-dim">
+                  {position.achievements.map((item) => (
+                    <li class="flex gap-2">
+                      <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-prompt" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </li>
+      ))
     }
   </ol>
 </section>

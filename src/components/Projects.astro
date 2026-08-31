@@ -2,69 +2,46 @@
 import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
-import { projectLogos } from '../lib/images';
+import { projectLogos, skillIcons } from '../lib/images';
+import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
   title: string;
-  buttons: { name: string; filter: string }[];
   projects: {
     name: string;
     logo?: string;
     role: string;
     timeline?: string | null;
-    repo: string;
     summary: string;
-    tags: string[];
+    skills: string[];
+    skillsNote?: string;
   }[];
 }
 
-const { lang, title, buttons, projects } = Astro.props;
+const { lang, projects } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section id="projects" class="mx-auto max-w-5xl scroll-mt-20 px-6 py-16 sm:py-20">
-  <p class="text-sm text-term-dim sm:text-base"><span class="text-prompt">$</span> ls -la ./projects/</p>
-  <h2 class="mt-1 text-term-dim"># {title}</h2>
+<section id="projects" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 py-16 sm:py-20">
+  <SectionWatermark text="Projects" />
 
-  <div id="project-filters" class="mt-6 flex flex-wrap gap-2">
-    {
-      buttons.map((button, i) => (
-        <button
-          type="button"
-          data-filter={button.filter}
-          aria-pressed={i === 0 ? 'true' : 'false'}
-          class:list={[
-            'rounded-md border px-3 py-1 font-mono text-sm transition-colors',
-            i === 0 ? 'border-prompt bg-prompt text-bg' : 'border-panel-border text-term-dim hover:border-prompt hover:text-prompt'
-          ]}
-        >
-          --{button.filter.replace(/\s+/g, '-')}
-        </button>
-      ))
-    }
-  </div>
+  <div class="relative mt-20 border-t border-panel-border" />
 
-  <div id="project-grid" class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+  <div id="project-grid" class="relative mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {
       projects.map((project) => {
         const logo = project.logo ? projectLogos.get(project.logo) : undefined;
         return (
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-tags={project.tags.join(',')}
-            class="project-card group flex flex-col rounded-lg border border-panel-border bg-panel p-5 transition-colors hover:border-prompt"
-          >
+          <div class="project-card rounded-2xl border border-panel-border bg-panel p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
             <div class="flex items-center gap-3">
               {logo ? (
-                <Image src={logo} alt={project.name} width={36} height={36} class="h-9 w-9 rounded object-contain" />
+                <Image src={logo} alt={project.name} width={72} class="h-9 w-9 rounded object-contain" />
               ) : (
                 <div class="h-9 w-9 rounded bg-panel-border" />
               )}
               <div>
-                <h3 class="font-semibold group-hover:text-prompt">{project.name}</h3>
+                <h3 class="font-bold">{project.name}</h3>
                 <p class="text-xs text-term-dim">
                   {project.role}
                   {project.timeline ? ` · ${project.timeline}` : ''}
@@ -72,38 +49,25 @@ const t = useTranslations(lang);
               </div>
             </div>
 
-            <p class="mt-3 flex-1 text-sm text-term-dim">{project.summary}</p>
+            <p class="mt-3 text-sm text-term-dim">{project.summary}</p>
 
-            <span class="mt-4 text-sm font-medium text-prompt">{t('projects.viewRepo')} →</span>
-          </a>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              {
+                project.skills.map((skill) => {
+                  const icon = skillIcons.get(skill);
+                  return icon ? <Image src={icon} alt={skill.replace(/\.\w+$/, '')} width={40} class="h-5 w-5 object-contain" /> : null;
+                })
+              }
+              {project.skillsNote && <span class="text-xs text-term-dim">{project.skillsNote}</span>}
+            </div>
+          </div>
         );
       })
     }
   </div>
+
+  <div class="relative mx-auto mt-5 flex max-w-md items-center justify-center gap-2 rounded-full border border-dashed border-panel-border px-5 py-2.5 text-center">
+    <span class="text-lg font-black text-prompt">+</span>
+    <p class="text-sm font-medium text-term-dim">{t('projects.moreProjects')}</p>
+  </div>
 </section>
-
-<script>
-  const filterBar = document.getElementById('project-filters');
-  const grid = document.getElementById('project-grid');
-
-  filterBar?.addEventListener('click', (event) => {
-    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
-    if (!button) return;
-
-    filterBar.querySelectorAll('button').forEach((btn) => {
-      btn.classList.remove('border-prompt', 'bg-prompt', 'text-bg');
-      btn.classList.add('border-panel-border', 'text-term-dim');
-      btn.setAttribute('aria-pressed', 'false');
-    });
-    button.classList.add('border-prompt', 'bg-prompt', 'text-bg');
-    button.classList.remove('border-panel-border', 'text-term-dim');
-    button.setAttribute('aria-pressed', 'true');
-
-    const filter = button.dataset.filter;
-    grid?.querySelectorAll<HTMLElement>('.project-card').forEach((card) => {
-      const tags = card.dataset.tags?.split(',') ?? [];
-      const show = filter === 'all' || tags.includes(filter ?? '');
-      card.classList.toggle('hidden', !show);
-    });
-  });
-</script>

@@ -5,97 +5,75 @@ section:
   weight: 5
   showOnNavbar: true
 
-buttons:
-  - name: All
-    filter: "all"
-  - name: Bootcamp
-    filter: "bootcamp"
-  - name: Test Perekrutan
-    filter: "perekrutan"
-  - name: Hobi
-    filter: "hobi"
-  - name: Profesional
-    filter: "profesional"
-  - name: Open Source
-    filter: "open source"
-
 projects:
-  - name: CloudBoz
-    logo: "cloudboz.png"
-    role: DevOps
-    timeline: "Januari 2022"
-    repo: https://github.com/cloudboz
-    summary: CloudBoz adalah sebuah platform untuk memudahkan pengguna dalam mengelola server dan aplikasi.
-    tags: ["open source", "hobby"]
+- name: iFortepay
+  logo: "ifortepay.png"
+  role: DevSecOps
+  timeline: "Oktober 2022 - Sekarang"
+  repo: https://ifortepay.id
+  summary: iFortePay adalah payment gateway asal Indonesia yang memungkinkan bisnis menerima pembayaran lewat 30+ metode lokal dan internasional, dilengkapi layanan pencairan dana, payment link, dan tanda tangan elektronik.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& tools lainnya"
 
-  - name: dumbflix
-    logo: "logodum.png"
-    role: DevOps
-    timeline: "Nov 2020"
-    repo: https://github.com/peruvianskies/Devops-final
-    summary: Menerbitkan aplikasi dumbflix, menggunakan container docker dengan server AWS.
-    tags: ["bootcamp", "cloud"]
+- name: Instapay
+  logo: "instapay.png"
+  role: DevSecOps
+  timeline: "April 2023 - Sekarang"
+  repo: https://instapay.id
+  summary: InstaPay adalah aplikasi mobile dari iFortePay buat bisnis kirim tagihan lewat WhatsApp, Telegram, email, atau media sosial dan menerima pembayaran lewat 20+ metode termasuk QRIS dan kartu kredit.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& tools lainnya"
 
-  - name: dumbsound
-    logo: "iconplay.png"
-    role: DevOps
-    timeline: "Oct 2020"
-    repo: https://github.com/PeruvianSkies/dumbways.id
-    summary: Menerbitkan aplikasi dumbsound, menggunakan otomatisasi Ansible dengan server AWS dan VMware.
-    tags: ["bootcamp", "academic"]
+- name: Government Payment Infra (NDA)
+  role: DevSecOps
+  summary: Proyek infrastruktur pembayaran rahasia untuk klien pemerintah, di bawah NDA.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& tools lainnya"
 
-  - name: Codemi Test
-    role: Nothing
-    timeline: "Des 2020"
-    repo: https://github.com/PeruvianSkies/codemi
-    summary: Uji Teknis.
-    tags: ["perekrutan", "profesional"]
+- name: CloudBoz
+  logo: "cloudboz.png"
+  role: DevOps
+  timeline: "Januari 2022"
+  repo: https://github.com/cloudboz
+  summary: CloudBoz adalah sebuah platform untuk memudahkan pengguna dalam mengelola server dan aplikasi.
+  skills: [ "docker.svg", "kubernetes.png", "ansible.png" ]
 
-  # NOTE: sumber asli menunjuk ke "no-code.png" yang tidak ada di assets gambar manapun
-  # (broken image dari situs Hugo lama) -- logo dikosongkan sampai kamu punya file penggantinya.
-  - name: Eigen Test
-    role: Nothing
-    timeline: "Jan 2021"
-    repo: https://gitlab.com/PeruvianSkies/eigentrimathema
-    summary: Uji Teknis.
-    tags: ["perekrutan", "profesional"]
+- name: dumbflix
+  logo: "logodum.png"
+  role: DevOps
+  timeline: "Nov 2020"
+  repo: https://github.com/peruvianskies/Devops-final
+  summary: Terinspirasi dari Netflix, dumbflix adalah layanan streaming berlangganan yang menawarkan berbagai serial TV, film, anime, dokumenter, dan lainnya di ribuan perangkat yang terhubung ke internet.
+  skills: [ "docker.svg", "redis.svg", "aws.svg", "certmanager.png", "jenkins.png", "prometheus.svg", "grafana.png" ]
 
-  - name: Scripting
-    logo: "bash.png"
-    role: Nothing
-    timeline:
-    repo: https://github.com/PeruvianSkies/Automation.aws/blob/master/automation.sh
-    summary: Script untuk instalasi otomatis.
-    tags: ["hobi", "server"]
+- name: dumbsound
+  logo: "iconplay.png"
+  role: DevOps
+  timeline: "Oct 2020"
+  repo: https://github.com/PeruvianSkies/dumbways.id
+  summary: dumbsound adalah layanan streaming musik yang menghadirkan musik dari berbagai negara, musisi, dan label rekaman.
+  skills: [ "docker.svg", "aws.svg", "ansible.png", "certmanager.png", "jenkins.png", "prometheus.svg", "grafana.png" ]
 
-  - name: Playbook
-    logo: "ansible.png"
-    role: Nothing
-    timeline:
-    repo: https://github.com/PeruvianSkies/automation-playbook
-    summary: Pedoman saya.
-    tags: ["hobi", "server"]
+- name: FastVid
+  logo: "fastvid.png"
+  role: DevOps
+  timeline: "April 2021"
+  repo: https://thefv.id
+  summary: FastVid adalah platform video sharing dan streaming untuk mengunggah, menyimpan, dan menonton video secara online.
+  skills: [ "docker.svg", "kubernetes.png", "digitalocean.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]
 
-  - name: FastVid
-    logo: "fastvid.png"
-    role: DevOps
-    timeline: "April 2021"
-    repo: https://thefv.id
-    summary: Menerbitkan dan memanage aplikasi Fastvid ke dalam cluster production, menggunakan Docker dan Kubernetes di Digitalocean Cloud Server.
-    tags: ["profesional", "cloud", "meteor"]
+- name: Roar
+  logo: "roar.png"
+  role: DevOps
+  timeline: "Mei 2021"
+  repo: https://roarjkt.com
+  summary: Roar adalah platform event dan komunitas untuk menemukan dan terhubung dengan scene lokal di Jakarta.
+  skills: [ "kubernetes.png", "digitalocean.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]
 
-  - name: Roar
-    logo: "roar.png"
-    role: DevOps
-    timeline: "Mei 2021"
-    repo: https://roarjkt.com
-    summary: Menerbitkan dan memanage aplikasi Roar ke dalam cluster production, menggunakan kontainerisasi Docker.
-    tags: ["profesional", "cloud", "meteor"]
-
-  - name: Alfamind
-    logo: "alfamind.png"
-    role: DevOps
-    timeline: "Maret 2021 - Sekarang"
-    repo: https://stage.portal-alfamind.wirgroup.net
-    summary: Menerbitkan, mengkonfigurasi dan memantau portal Alfamind ke dalam cluster staging, menggunakan Docker dan Kubernetes di Alibaba Cloud Server.
-    tags: ["profesional", "cloud", "meteor"]
+- name: Alfamind
+  logo: "alfamind.png"
+  role: DevOps
+  timeline: "Maret 2021 - Sekarang"
+  repo: https://stage.portal-alfamind.wirgroup.net
+  summary: Alfamind adalah platform reseller online dari Alfamart, memungkinkan siapa saja membuka toko sendiri dan mendapat penghasilan dengan menjual produk dari jaringan retail Alfamart.
+  skills: [ "docker.svg", "kubernetes.png", "alibabacloud.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]

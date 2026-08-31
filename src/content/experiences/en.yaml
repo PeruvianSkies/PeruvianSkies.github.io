@@ -8,8 +8,8 @@ section:
 experiences:
   - company:
       name: iForte Payment Infrastructure
-      url: ""
-      location: ""
+      url: "https://ifortepay.id/"
+      location: Jakarta Selatan
     positions:
       - designation: DevOps Engineer Lead
         start: Apr 2026
@@ -17,27 +17,28 @@ experiences:
         responsibilities:
           - Lead cross-team architecture review for infrastructure changes, evaluating PCI-DSS payload exposure and sequencing against the platform roadmap.
           - Serve as DevOps/security technical point of contact for PCI-DSS and ISO 27001 audits — reviewing evidence and assigning remediation actions ahead of auditor presentation.
-          - Own post-incident RCA process as escalation point for major incidents; drive platform reliability (SRE) roadmap across DC/DR/Tools GKE clusters, reporting to leadership.
-          - Drive FinOps adoption for GKE workloads via Crawl-Walk-Run cost visibility framework, including team-led tooling POCs surfaced to management.
+          - Own post-incident RCA process as escalation point for major incidents; drive platform reliability (SRE) roadmap across disaster-recovery and tooling clusters, reporting to leadership.
+          - Drive FinOps adoption for cloud workloads via a cost visibility framework, including team-led tooling POCs surfaced to management.
           - Standardize SOPs/governance guardrails balancing delivery velocity against production-access risk in a PCI-DSS-regulated environment.
           - Mentor and technically direct DevOps engineers, including onboarding of new hires and participation in technical interviews.
       - designation: Senior DevOps Engineer
         start: Okt 2022
         end: Apr 2026
         responsibilities:
-          - Designed and operated multi-cluster Kubernetes (GKE) platform (DC/DR/Tools) with secure private networking.
-          - Built secure CI/CD and GitOps ecosystem (Jenkins, ArgoCD, Kustomize) for controlled and auditable deployments.
-          - Implemented shift-left security in CI/CD — SAST (Horusec), SCA/image scanning (Trivy), consolidated via SonarQube; enforced TLS and SIEM (Wazuh) monitoring.
-          - Architected cloud networking, VPC segmentation, ILB routing, and Fortinet integration for secure traffic flows.
-          - Established comprehensive observability using Prometheus, Grafana, Wazuh, ELK, and Kafka logging.
+          - Designed and operated a multi-cluster managed Kubernetes platform spanning disaster-recovery and tooling environments, with secure private networking.
+          - Built a secure CI/CD and GitOps ecosystem for controlled and auditable deployments.
+          - Implemented shift-left security in CI/CD — static application security testing, dependency/image scanning, and centralized code-quality checks; enforced TLS and SIEM monitoring.
+          - Architected cloud networking, VPC segmentation, and internal load-balancer routing with firewall integration for secure traffic flows.
+          - Established a comprehensive observability stack covering metrics, dashboards, SIEM, and centralized log streaming.
           - Collaborated closely with Backend and Compliance teams; informally mentored junior & middle DevOps engineers.
-          - "Key achievement: migrated critical payment microservices from VM/Docker to Kubernetes (GKE) with a zero-downtime, rollback-safe strategy."
-          - "Key achievement: designed and deployed the multi-cluster GKE platform with private networking, Fortinet integration, PCI-aligned segmentation, and secure ILB routing."
-          - "Key achievement: built Jenkins infrastructure with PostgreSQL backend, GCS Fuse, and SSD storage; standardized CI/CD pipelines to improve delivery and audit readiness."
-          - "Key achievement: implemented full GitOps lifecycle (Bitbucket → Jenkins → ArgoCD + Kustomize), ensuring governance, traceability, and deployment consistency."
-          - "Key achievement: strengthened security posture via SIEM correlation, TLS hardening, and continuous vulnerability scanning."
-          - "Key achievement: built end-to-end observability stack, significantly improving incident visibility and recovery time."
-          - "Key achievement: standardized Kubernetes onboarding templates, reducing provisioning time from hours to minutes."
+        achievements:
+          - Migrated critical payment microservices to a managed Kubernetes platform with a zero-downtime, rollback-safe strategy.
+          - Designed and deployed a multi-cluster Kubernetes platform with private networking, firewall integration, PCI-aligned segmentation, and secure internal load-balancer routing.
+          - Built and standardized CI/CD pipeline infrastructure with resilient backend storage to improve delivery speed and audit readiness.
+          - Implemented a full GitOps delivery lifecycle, ensuring governance, traceability, and deployment consistency.
+          - Strengthened security posture via SIEM correlation, TLS hardening, and continuous vulnerability scanning.
+          - Built end-to-end observability stack, significantly improving incident visibility and recovery time.
+          - Standardized Kubernetes onboarding templates, reducing provisioning time from hours to minutes.
 
   - company:
       name: PT Jaya Agung Teknologi
@@ -77,50 +78,3 @@ experiences:
           - Create CICD Pipeline, monitoring tools like Prometheus & Grafana.
           - Configuration instance Server at many Clouds Provider or on-premises servers.
 
-  - company:
-      name: PT Adira Dinamika Multi Finance
-      url: "https://www.adira.co.id/"
-      location: Jakarta Barat
-    positions:
-      - designation: Customers Relations Officer
-        start: Apr 2018
-        end: Apr 2020
-        responsibilities:
-          - Conduction survey assigment for NDS (Non Dealer Sales) and selling some NDS product.
-          - Expanding NDS orders through channels, institutions or community organizations.
-
-  - company:
-      name: PT Sinqe Material Indonesia
-      url: "http://www.cntopbright.com/products.html"
-      location: Jakarta Barat
-    positions:
-      - designation: Marketing Specialist
-        start: Jul 2014
-        end: Oct 2017
-        responsibilities:
-          - Brainstorm and develop ideas for creative marketing campaigns.
-          - Undertake individual tasks of a marketing plan as assigned.
-
-  - company:
-      name: PT Blue Bird Group
-      url: "https://www.bluebirdgroup.com/"
-      location: Jakarta Selatan
-    positions:
-      - designation: Assistant Group Head
-        start: Apr 2012
-        end: Mar 2014
-        responsibilities:
-          - Estimate damaged car with analyze report and managed mechanic working hours.
-          - Make daily reports.
-
-  - company:
-      name: PT Adira Dinamika Multi Finance
-      url: "https://www.adira.co.id/"
-      location: Tangerang
-    positions:
-      - designation: Credit Marketing Officer
-        start: Feb 2010
-        end: Mar 2012
-        responsibilities:
-          - Plan and execute initiatives to reach the target audience through appropriate channels.
-          - Maintain good relations with the source of the order.

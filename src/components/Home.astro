@@ -37,7 +37,7 @@ const pageTitle = `${author.name} — ${about.designation}`;
 
 const stats = {
   yearsExperience: '5+',
-  projectsCount: projects.projects.length,
+  projectsCount: 50,
   companiesCount: experiences.experiences.length,
   skillsCount: skills.categories.reduce((total, category) => total + category.skills.length, 0)
 };
@@ -63,7 +63,7 @@ const stats = {
 
     <Experience lang={lang} title={experiences.section.name} experiences={experiences.experiences} />
 
-    <Projects lang={lang} title={projects.section.name} buttons={projects.buttons} projects={projects.projects} />
+    <Projects lang={lang} title={projects.section.name} projects={projects.projects} />
   </main>
 
   <Footer lang={lang} copyright={site.copyright} email={author.contactInfo.email} socialLinks={about.socialLinks} />
