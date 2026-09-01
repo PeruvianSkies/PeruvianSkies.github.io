@@ -2,11 +2,19 @@
 
 version: 2
 updates:
-  # Update the git submodules
-  - package-ecosystem: "gitsubmodule"
+  # Update npm dependencies (Astro, Tailwind, etc.)
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     labels:
       - "dependencies"
       - "automerge"
+
+  # Keep the GitHub Actions deploy workflow up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"

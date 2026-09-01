@@ -1,0 +1,80 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 2
+  showOnNavbar: true
+
+experiences:
+  - company:
+      name: iForte Payment Infrastructure
+      url: "https://ifortepay.id/"
+      location: Jakarta Selatan
+    positions:
+      - designation: DevOps Engineer Lead
+        start: Apr 2026
+        end:
+        responsibilities:
+          - Lead cross-team architecture review for infrastructure changes, evaluating PCI-DSS payload exposure and sequencing against the platform roadmap.
+          - Serve as DevOps/security technical point of contact for PCI-DSS and ISO 27001 audits — reviewing evidence and assigning remediation actions ahead of auditor presentation.
+          - Own post-incident RCA process as escalation point for major incidents; drive platform reliability (SRE) roadmap across disaster-recovery and tooling clusters, reporting to leadership.
+          - Drive FinOps adoption for cloud workloads via a cost visibility framework, including team-led tooling POCs surfaced to management.
+          - Standardize SOPs/governance guardrails balancing delivery velocity against production-access risk in a PCI-DSS-regulated environment.
+          - Mentor and technically direct DevOps engineers, including onboarding of new hires and participation in technical interviews.
+      - designation: Senior DevOps Engineer
+        start: Okt 2022
+        end: Apr 2026
+        responsibilities:
+          - Designed and operated a multi-cluster managed Kubernetes platform spanning disaster-recovery and tooling environments, with secure private networking.
+          - Built a secure CI/CD and GitOps ecosystem for controlled and auditable deployments.
+          - Implemented shift-left security in CI/CD — static application security testing, dependency/image scanning, and centralized code-quality checks; enforced TLS and SIEM monitoring.
+          - Architected cloud networking, VPC segmentation, and internal load-balancer routing with firewall integration for secure traffic flows.
+          - Established a comprehensive observability stack covering metrics, dashboards, SIEM, and centralized log streaming.
+          - Collaborated closely with Backend and Compliance teams; informally mentored junior & middle DevOps engineers.
+        achievements:
+          - Migrated critical payment microservices to a managed Kubernetes platform with a zero-downtime, rollback-safe strategy.
+          - Designed and deployed a multi-cluster Kubernetes platform with private networking, firewall integration, PCI-aligned segmentation, and secure internal load-balancer routing.
+          - Built and standardized CI/CD pipeline infrastructure with resilient backend storage to improve delivery speed and audit readiness.
+          - Implemented a full GitOps delivery lifecycle, ensuring governance, traceability, and deployment consistency.
+          - Strengthened security posture via SIEM correlation, TLS hardening, and continuous vulnerability scanning.
+          - Built end-to-end observability stack, significantly improving incident visibility and recovery time.
+          - Standardized Kubernetes onboarding templates, reducing provisioning time from hours to minutes.
+
+  - company:
+      name: PT Jaya Agung Teknologi
+      url: https://www.jayaagung.tech/
+      location: Jakarta Utara
+    positions:
+      - designation: Senior DevOps Engineer
+        start: July 2021
+        end: Okt 2022
+        responsibilities:
+          - Design and implement infrastructure clustering system using Google Kubernetes Engine, Jenkins pipeline for Continuous Integration and ArgoCD.
+          - Monitoring log and network performance application using Datadog, Prometheus and GCP Log Management.
+          - Manage infrastructure team in critical tasks such as production deployment, application patching, and hotfixes in the production environment by develop implement planning.
+
+  - company:
+      name: PT Meteor Inovasi Digital
+      url: "https://www.meteor.id/"
+      location: Tangerang Selatan
+    positions:
+      - designation: DevOps Engineer
+        start: Feb 2021
+        end: July 2021
+        responsibilities:
+          - Working with developers to ensure the development process works as intended and running properly, building and config infrastructure for any application.
+          - Ensuring microservices cluster or Cloud Server is safe and protected from security threats or disasters.
+
+  - company:
+      name: Freelance
+      url: ""
+      location: Tangerang
+    positions:
+      - designation: TechOps Engineer
+        start: Apr 2020
+        end: Feb 2021
+        responsibilities:
+          - Writing Dockerfile, Ansible Playbook, Jenkinsfile, Kubernetes Manifest, etc.
+          - Create CICD Pipeline, monitoring tools like Prometheus & Grafana.
+          - Configuration instance Server at many Clouds Provider or on-premises servers.
+

@@ -1,0 +1,17 @@
+---
+interface Props {
+  command: string;
+  title: string;
+}
+
+const { command, title } = Astro.props;
+---
+
+<div class="relative">
+  <p class="font-mono text-xs text-term-dim sm:text-sm">
+    <span class="text-prompt">$</span> {command}
+  </p>
+  <h2 class="mt-1 text-2xl font-bold tracking-tight text-term-dim sm:text-3xl">
+    <span class="text-prompt">#</span> {title}
+  </h2>
+</div>

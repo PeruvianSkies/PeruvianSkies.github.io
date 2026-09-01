@@ -1,0 +1,79 @@
+section:
+  name: All About Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+projects:
+- name: iFortepay
+  logo: "ifortepay.png"
+  role: DevSecOps
+  timeline: "October 2022 - Present"
+  repo: https://ifortepay.id
+  summary: iFortePay is an Indonesian payment gateway that lets businesses accept payments through 30+ local and international methods, along with fund disbursement, payment links, and e-signing services.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& more tools"
+
+- name: Instapay
+  logo: "instapay.png"
+  role: DevSecOps
+  timeline: "April 2023 - Present"
+  repo: https://instapay.id
+  summary: InstaPay is iFortePay's mobile app for businesses to bill customers over WhatsApp, Telegram, email, or social media and get paid through 20+ methods including QRIS and credit cards.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& more tools"
+
+- name: Government Payment Infra (NDA)
+  role: DevSecOps
+  summary: Confidential payment infrastructure project for a government client, under NDA.
+  skills: [ "docker.svg", "kubernetes.png", "gcp.svg", "jenkins.png", "argocd.svg", "kustomize.png", "prometheus.svg", "grafana.png" ]
+  skillsNote: "& more tools"
+
+- name: CloudBoz
+  logo: "cloudboz.png"
+  role: DevOps
+  timeline: "Januari 2022"
+  repo: https://github.com/cloudboz
+  summary: CloudBoz is a platform that makes it easy for users to manage servers and applications.
+  skills: [ "docker.svg", "kubernetes.png", "ansible.png" ]
+
+- name: dumbflix
+  logo: "logodum.png"
+  role: DevOps
+  timeline: "Nov 2020"
+  repo: https://github.com/peruvianskies/Devops-final
+  summary: Inspired by Netflix is a subcription-based streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+  skills: [ "docker.svg", "redis.svg", "aws.svg", "certmanager.png", "jenkins.png", "prometheus.svg", "grafana.png" ]
+
+- name: dumbsound
+  logo: "iconplay.png"
+  role: DevOps
+  timeline: "Oct 2020"
+  repo: https://github.com/PeruvianSkies/dumbways.id
+  summary: Dumbsound is a music streaming service, providing music from various countries, artists and record labels.
+  skills: [ "docker.svg", "aws.svg", "ansible.png", "certmanager.png", "jenkins.png", "prometheus.svg", "grafana.png" ]
+
+- name: FastVid
+  logo: "fastvid.png"
+  role: DevOps
+  timeline: "April 2021"
+  repo: https://thefv.id
+  summary: FastVid is a video sharing and streaming platform for uploading, hosting, and watching videos online.
+  skills: [ "docker.svg", "kubernetes.png", "digitalocean.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]
+
+- name: Roar
+  logo: "roar.png"
+  role: DevOps
+  timeline: "Mei 2021"
+  repo: https://roarjkt.com
+  summary: Roar is an event and community platform for discovering and connecting around Jakarta's local scene.
+  skills: [ "docker.svg", "digitalocean.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]
+
+- name: Alfamind
+  logo: "alfamind.png"
+  role: DevOps
+  timeline: "March 2021"
+  repo: https://stage.portal-alfamind.wirgroup.net
+  summary: Alfamind is Alfamart's online reselling platform, letting anyone open their own store and earn income by selling products from Alfamart's retail network.
+  skills: [ "docker.svg", "kubernetes.png", "alibabacloud.svg", "jenkins.png", "prometheus.svg", "grafana.png" ]

@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+import { projectLogos, skillIcons } from '../lib/images';
+import CategoryIcon from './CategoryIcon.astro';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  projects: {
+    name: string;
+    logo?: string;
+    role: string;
+    timeline?: string | null;
+    summary: string;
+    skills: string[];
+    skillsNote?: string;
+  }[];
+}
+
+const { lang, title, projects } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="projects" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 py-16 sm:py-20">
+  <SectionHeading command="ls -la ./projects/" title={title} />
+
+  <div class="relative mt-20 border-t border-panel-border" />
+
+  <div id="project-grid" class="relative mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      projects.map((project) => {
+        const logo = project.logo ? projectLogos.get(project.logo) : undefined;
+        return (
+          <div class="project-card flex flex-col rounded-2xl border border-panel-border bg-panel p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex items-center gap-3">
+              {logo ? (
+                <Image src={logo} alt={project.name} width={72} class="h-9 w-9 rounded object-contain" />
+              ) : (
+                <div class="grid h-9 w-9 place-items-center rounded bg-panel-border" title="Confidential project">
+                  <CategoryIcon name="security" class="h-5 w-5 text-term-dim" />
+                </div>
+              )}
+              <div>
+                <h3 class="font-bold">{project.name}</h3>
+                <p class="text-xs text-term-dim">
+                  {project.role}
+                  {project.timeline ? ` · ${project.timeline}` : ''}
+                </p>
+              </div>
+            </div>
+
+            <p class="mt-3 text-sm text-term-dim">{project.summary}</p>
+
+            <div class="mt-auto flex flex-wrap items-center gap-2 border-t border-panel-border/60 pt-4">
+              {
+                project.skills.map((skill) => {
+                  const icon = skillIcons.get(skill);
+                  return icon ? <Image src={icon} alt={skill.replace(/\.\w+$/, '')} width={40} class="h-5 w-5 object-contain" /> : null;
+                })
+              }
+              {project.skillsNote && <span class="text-xs text-term-dim">{project.skillsNote}</span>}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <div class="relative mx-auto mt-5 flex max-w-md items-center justify-center gap-2 rounded-full border border-dashed border-panel-border px-5 py-2.5 text-center">
+    <span class="text-lg font-black text-prompt">+</span>
+    <p class="text-sm font-medium text-term-dim">{t('projects.moreProjects')}</p>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+
+designation: DevOps Engineer Lead
+company:
+  name: iFortepay
+  url: "https://ifortepay.id/"
+
+resume: "/files/resume-tian2026.pdf"
+
+summary: "Technical lead with 5+ years in DevOps/platform engineering, currently leading DevOps strategy and governance for a PCI DSS-regulated fintech payment platform, with a strong DevSecOps focus (shift-left security, SAST/SCA, SIEM). Own cross-team architecture review, FinOps adoption, and PCI-DSS/ISO 27001 audit engagements, on top of hands-on ownership of multi-cluster Kubernetes (GKE) infrastructure, GitOps, and observability. Experienced mentoring engineers and standardizing SOPs/governance guardrails to balance delivery speed against production-access risk."
+
+socialLinks:
+- name: Linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/tian-putra-nuhcahya/"
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/PeruvianSkies"
+- name: Gitlab
+  icon: "fab fa-gitlab"
+  url: "https://gitlab.com/PeruvianSkies"
+- name: Email
+  icon: "fas fa-envelope"
+  url: "mailto:tianputra33@yahoo.com"
+- name: Whatsapp
+  icon: "fab fa-whatsapp"
+  url: "https://api.whatsapp.com/send?phone=682120320330"
+- name: Telegram
+  icon: "fab fa-telegram"
+  url: "https://t.me/Tianputra"
+
+softSkills:
+- name: Communication
+  percentage: 90
+  color: blue
+- name: Team Work
+  percentage: 85
+  color: yellow
+- name: Mentoring / Leadership
+  percentage: 80
+  color: green
+- name: Stakeholder Management
+  percentage: 85
+  color: orange
+- name: Profesional
+  percentage: 85
+  color: sky
+- name: Responsible
+  percentage: 80
+  color: pink

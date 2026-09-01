@@ -1,0 +1,108 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLangHref = lang === 'en' ? '/id/' : '/';
+const otherLangLabel = t('lang.switchTo');
+
+const navItems = [
+  { href: '#about', label: t('nav.about') },
+  { href: '#skills', label: t('nav.skills') },
+  { href: '#experiences', label: t('nav.experiences') },
+  { href: '#projects', label: t('nav.projects') }
+];
+---
+
+<header
+  id="site-header"
+  class="fixed inset-x-0 top-0 z-50 transition-shadow duration-300 data-[scrolled=true]:bg-bg data-[scrolled=true]:shadow-sm data-[scrolled=true]:shadow-black/5"
+>
+  <div class="mx-auto flex max-w-[100rem] items-center justify-between px-6 py-4">
+    <nav class="hidden items-center gap-8 font-mono text-sm font-medium text-term-dim sm:flex">
+      {
+        navItems.map((item) => (
+          <a href={item.href} class="transition-colors hover:text-prompt">
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href={otherLangHref}
+        class="rounded-md border border-panel-border px-3 py-1.5 font-mono text-xs font-medium text-term-dim transition-colors hover:border-prompt hover:text-prompt"
+      >
+        {otherLangLabel}
+      </a>
+
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label={t('theme.toggle')}
+        class="grid h-9 w-9 place-items-center rounded-full border border-panel-border text-term-dim transition-colors hover:border-prompt hover:text-prompt"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden h-4 w-4 dark:block">
+          <circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="block h-4 w-4 dark:hidden">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+
+      <button
+        id="nav-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        class="grid h-9 w-9 place-items-center rounded-full border border-panel-border text-term-dim transition-colors hover:border-prompt hover:text-prompt sm:hidden"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="hidden space-y-1 border-t border-panel-border bg-bg px-6 py-3 text-sm text-term-dim sm:hidden">
+    {
+      navItems.map((item) => (
+        <a href={item.href} class="block rounded-md px-2 py-2 font-medium transition-colors hover:bg-panel-border/30 hover:text-prompt">
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById('site-header');
+  const updateHeaderState = () => {
+    header?.setAttribute('data-scrolled', String(window.scrollY > 8));
+  };
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
+
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  navToggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('hidden') === false;
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileNav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => mobileNav.classList.add('hidden'));
+  });
+</script>

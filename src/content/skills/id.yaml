@@ -1,0 +1,159 @@
+section:
+  name: Keahlian
+  id: skills
+  enable: true
+  weight: 3
+  showOnNavbar: true
+
+categories:
+  - name: Platform & Cloud
+    genericIcon: cloud
+    skills:
+      - name: Google Cloud Platform
+        icon: "gcp.svg"
+        summary: "Deploy dan mengoperasikan platform GKE multi-cluster di production."
+        url: "https://cloud.google.com/docs"
+      - name: AWS
+        icon: "aws.svg"
+        summary: "Bekerja dengan infrastruktur berbasis AWS untuk deployment aplikasi."
+        url: "https://docs.aws.amazon.com/index.html"
+      - name: Alibaba Cloud
+        icon: "alibabacloud.svg"
+        summary: "Deploy dan mengelola cluster production di Alibaba Cloud."
+        url: "https://www.alibabacloud.com/help"
+      - name: DigitalOcean
+        icon: "digitalocean.svg"
+        summary: "Deploy dan mengelola aplikasi di cloud server DigitalOcean."
+        url: "https://docs.digitalocean.com/"
+
+  - name: Container & Orchestration
+    genericIcon: containers
+    skills:
+      - name: Docker
+        icon: "docker.svg"
+        summary: "Menulis sebagian besar program dengan container docker. Berpengalaman dengan proses multi-tahap, proses pembuatan multi-lingkungan."
+        url: "https://docs.docker.com/"
+      - name: Kubernetes
+        icon: "kubernetes.png"
+        summary: "Mampu menerapkan, mengelola aplikasi di Kubernetes. Berpengalaman dalam menulis kontrol untuk HPA."
+        url: "https://kubernetes.io/docs/home/"
+
+  - name: Data & Messaging
+    genericIcon: data
+    skills:
+      - name: Kafka
+        icon: "kafka.svg"
+        summary: "Tulang punggung log streaming yang memberi data ke pipeline logging ELK terpusat."
+        url: "https://kafka.apache.org/documentation/"
+      - name: Redis
+        icon: "redis.svg"
+        summary: "In-memory data store untuk caching dan session management."
+        url: "https://redis.io/docs/latest/"
+      - name: Redpanda
+        icon: "redpanda.png"
+        summary: "Platform streaming yang kompatibel dengan Kafka tanpa overhead ZooKeeper/JVM."
+        url: "https://docs.redpanda.com/"
+
+  - name: CI/CD & Otomatisasi
+    genericIcon: cicd
+    skills:
+      - name: Jenkins
+        icon: "jenkins.png"
+        summary: "Menggunakan perangkat utama CI/CD untuk meluncurkan. Mampu membuat pipeline yang terukur, dapat diuji, dan program yang dapat dipelihara."
+        url: "https://www.jenkins.io/doc/"
+      - name: ArgoCD
+        icon: "argocd.svg"
+        summary: "GitOps continuous delivery -- pipeline penuh Bitbucket ke Jenkins ke ArgoCD untuk deployment yang terkontrol dan auditable."
+        url: "https://argo-cd.readthedocs.io/"
+      - name: Kustomize
+        icon: "kustomize.png"
+        summary: "Manajemen manifest native tanpa template untuk GitOps -- dipilih dibanding Helm karena overlay-nya deklaratif dan auditable."
+        url: "https://kubectl.docs.kubernetes.io/references/kustomize/"
+      - name: Ansible
+        icon: "ansible.png"
+        summary: "Mampu membuat sebuah konfigurasi untuk mengotomasisasi banyak server dengan ansible-playbook."
+        url: "https://docs.ansible.com/"
+
+  - name: Keamanan & Kepatuhan
+    genericIcon: security
+    skills:
+      - name: Horusec
+        icon: "horusec.png"
+        summary: "SAST -- static application security testing di CI/CD sebelum deploy."
+        url: "https://docs.horusec.io/"
+      - name: Trivy
+        icon: "trivy.svg"
+        summary: "SCA -- image and dependency vulnerability scanning di CI/CD sebelum deploy."
+        url: "https://trivy.dev/"
+      - name: SonarQube
+        icon: "sonarqube.svg"
+        summary: "Code quality gate yang mengkonsolidasikan temuan SAST/SCA sebelum merge."
+        url: "https://docs.sonarsource.com/sonarqube/"
+      - name: SIEM (Wazuh)
+        icon: "wazuh.png"
+        summary: "Monitoring keamanan dan korelasi log untuk deteksi ancaman di seluruh infrastruktur produksi."
+        url: "https://documentation.wazuh.com/"
+      - name: HashiCorp Vault
+        icon: "vault.svg"
+        summary: "Client-side secret management untuk kredensial dan rotasi key."
+        url: "https://developer.hashicorp.com/vault"
+      - name: Kyverno
+        icon: "kyverno.png"
+        summary: "Policy engine Kubernetes-native untuk menegakkan guardrail keamanan dan governance pada resource cluster."
+        url: "https://kyverno.io/docs/"
+      - name: cert-manager
+        icon: "certmanager.png"
+        summary: "Otomasi penerbitan dan perpanjangan sertifikat TLS untuk workload di dalam cluster."
+        url: "https://cert-manager.io/docs/"
+      - name: Cloudflare WAF
+        icon: "cloudflare.svg"
+        summary: "Web application firewall dan proteksi DDoS di edge, di depan traffic production."
+        url: "https://developers.cloudflare.com/waf/"
+      - name: Snyk
+        icon: "snyk.svg"
+        summary: "Scanning SCA/SAST developer-first untuk kerentanan dependency dan kode."
+        url: "https://docs.snyk.io/"
+
+  - name: FinOps
+    genericIcon: finops
+    skills:
+      - name: Kubecost
+        icon: "kubecost.svg"
+        summary: "Cost visibility untuk workload Kubernetes lewat framework adopsi FinOps Crawl-Walk-Run."
+        url: "https://www.kubecost.com/"
+
+  - name: Observability & Monitoring
+    genericIcon: observability
+    skills:
+      - name: Grafana
+        icon: "grafana.png"
+        summary: "Mampu membuat pengaturan dan konfigurasi menggunakan metrik Prometheus, dan Berpengalaman dengan menulis metrik exporters."
+        url: "https://grafana.com/docs/"
+      - name: Prometheus
+        icon: "prometheus.svg"
+        summary: "Pengumpulan metrik dan alerting yang dipasangkan dengan dashboard Grafana di seluruh cluster GKE."
+        url: "https://prometheus.io/docs/"
+      - name: Datadog
+        icon: "datadog.svg"
+        summary: "APM dan monitoring infrastruktur untuk visibilitas insiden produksi."
+        url: "https://docs.datadoghq.com/"
+      - name: ELK Stack
+        icon: "elasticsearch.svg"
+        summary: "Pipeline logging tersentralisasi (Elasticsearch, Logstash, Kibana) dengan Kafka untuk streaming log."
+        url: "https://www.elastic.co/guide/"
+
+  - name: Sistem & Jaringan
+    genericIcon: systems
+    skills:
+      - name: Linux Server
+        icon: "ubuntu.png"
+        summary: "Menggunakan Linux sebagai main server sistem seperti Ubuntu, Centos, RHEL, Fedora, dll. Mampu menulis scripts bash/shell."
+        url: "https://ubuntu.com/server/docs"
+      - name: GitOps
+        icon: "git.png"
+        summary: "Pengembangan berbasis Git dan alur kerja delivery GitOps. Sebagian besar GitHub, juga berpengalaman dengan GitLab dan Bitbucket."
+        url: "https://git-scm.com/doc"
+      - name: OPNsense
+        icon: "opnsense.svg"
+        summary: "Membangun dan mengelola custom image firewall OPNsense untuk segmentasi jaringan yang aman."
+        url: "https://docs.opnsense.org/"
