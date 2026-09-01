@@ -16,17 +16,16 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="relative overflow-hidden border-t border-panel-border bg-gradient-to-b from-accent-500/5 to-bg">
-  <div class="bg-grid absolute inset-0"></div>
+  <div class="bg-ambient absolute inset-0"></div>
 
   <div class="relative mx-auto max-w-2xl px-6 py-20 text-center">
     <h2 class="text-3xl font-black tracking-tight sm:text-4xl">{t('about.contactMe')}</h2>
-    <p class="mt-4 text-term-dim">{copyright}</p>
 
     <a
       href={`mailto:${email}`}
-      class="mt-8 inline-block rounded-full bg-prompt px-7 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+      class="mt-6 inline-block rounded-md bg-prompt px-7 py-3 font-mono text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
     >
-      {email}
+      {t('footer.cta')} →
     </a>
 
     <div class="mt-8 flex items-center justify-center gap-3">
