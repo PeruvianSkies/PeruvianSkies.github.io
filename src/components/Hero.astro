@@ -28,7 +28,23 @@ const photoImage = authorPhotos.get(photo);
   <div class="bg-ambient absolute inset-0"></div>
 
   <div class="relative mx-auto min-h-[100svh] max-w-[100rem] px-6 pt-16 pb-12 lg:pb-0">
-    <div class="mt-10 lg:mt-0 lg:translate-y-16 lg:max-w-xl [@media(min-width:1440px)_and_(max-height:850px)]:max-w-2xl">
+    {
+      photoImage && (
+        <div class="mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full bg-prompt/15 sm:h-48 sm:w-48 lg:hidden">
+          <Image
+            src={photoImage}
+            alt={name}
+            width={600}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+            class="h-full w-full object-cover object-top"
+          />
+        </div>
+      )
+    }
+
+    <div class="lg:mt-0 lg:translate-y-16 lg:max-w-xl [@media(min-width:1440px)_and_(max-height:850px)]:max-w-2xl">
       <p class="font-mono text-sm font-semibold text-prompt">
         <span class="text-term-dim">$</span> {greeting}
       </p>
@@ -82,15 +98,14 @@ const photoImage = authorPhotos.get(photo);
 
     {
       photoImage && (
-        <div class="mt-10 flex justify-center lg:absolute lg:inset-y-0 lg:right-6 lg:mt-0 lg:items-end lg:justify-end">
+        <div class="hidden lg:absolute lg:inset-y-0 lg:right-6 lg:flex lg:items-end lg:justify-end">
           <Image
             src={photoImage}
             alt={name}
             width={1150}
             height={1190}
-            loading="eager"
-            fetchpriority="high"
-            class="aspect-[1150/1190] w-64 object-contain object-bottom sm:w-80 lg:h-full lg:w-auto lg:max-h-[92vh]"
+            loading="lazy"
+            class="aspect-[1150/1190] object-contain object-bottom lg:h-full lg:w-auto lg:max-h-[92vh]"
           />
         </div>
       )
