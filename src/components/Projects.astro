@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import { projectLogos, skillIcons } from '../lib/images';
+import CategoryIcon from './CategoryIcon.astro';
 import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
@@ -39,7 +40,9 @@ const t = useTranslations(lang);
               {logo ? (
                 <Image src={logo} alt={project.name} width={72} class="h-9 w-9 rounded object-contain" />
               ) : (
-                <div class="h-9 w-9 rounded bg-panel-border" />
+                <div class="grid h-9 w-9 place-items-center rounded bg-panel-border" title="Confidential project">
+                  <CategoryIcon name="security" class="h-5 w-5 text-term-dim" />
+                </div>
               )}
               <div>
                 <h3 class="font-bold">{project.name}</h3>
