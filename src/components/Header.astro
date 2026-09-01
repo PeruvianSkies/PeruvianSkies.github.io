@@ -25,7 +25,7 @@ const navItems = [
   class="fixed inset-x-0 top-0 z-50 transition-shadow duration-300 data-[scrolled=true]:bg-bg data-[scrolled=true]:shadow-sm data-[scrolled=true]:shadow-black/5"
 >
   <div class="mx-auto flex max-w-[100rem] items-center justify-between px-6 py-4">
-    <nav class="hidden items-center gap-8 text-sm font-medium text-term-dim sm:flex">
+    <nav class="hidden items-center gap-8 font-mono text-sm font-medium text-term-dim sm:flex">
       {
         navItems.map((item) => (
           <a href={item.href} class="transition-colors hover:text-prompt">
@@ -38,7 +38,7 @@ const navItems = [
     <div class="flex items-center gap-2">
       <a
         href={otherLangHref}
-        class="rounded-full border border-panel-border px-3 py-1.5 text-xs font-medium text-term-dim transition-colors hover:border-prompt hover:text-prompt"
+        class="rounded-md border border-panel-border px-3 py-1.5 font-mono text-xs font-medium text-term-dim transition-colors hover:border-prompt hover:text-prompt"
       >
         {otherLangLabel}
       </a>

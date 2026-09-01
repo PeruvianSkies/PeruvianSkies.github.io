@@ -4,7 +4,6 @@ import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import { authorPhotos } from '../lib/images';
 import SocialIcon from './SocialIcon.astro';
-import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
@@ -26,12 +25,13 @@ const photoImage = authorPhotos.get(photo);
 
 <section id="about" class="relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-b from-accent-500/10 via-accent-500/5 to-bg"></div>
-  <div class="bg-grid absolute inset-0"></div>
-  <SectionWatermark text="DevSecOps" topClass="top-16" sizeClass="text-[14vw] sm:text-[7vw]" />
+  <div class="bg-ambient absolute inset-0"></div>
 
   <div class="relative mx-auto min-h-[100svh] max-w-[100rem] px-6 pt-16 pb-12 lg:pb-0">
-    <div class="mt-[calc(14vw+24px)] sm:mt-[calc(7vw+24px)] lg:mt-0 lg:translate-y-[calc(7vw+16px)] lg:max-w-xl [@media(min-width:1440px)_and_(max-height:850px)]:max-w-2xl">
-      <p class="font-semibold text-prompt">{greeting}</p>
+    <div class="mt-10 lg:mt-0 lg:translate-y-16 lg:max-w-xl [@media(min-width:1440px)_and_(max-height:850px)]:max-w-2xl">
+      <p class="font-mono text-sm font-semibold text-prompt">
+        <span class="text-term-dim">$</span> {greeting}
+      </p>
       <h1 class="mt-1 text-5xl leading-[0.95] font-black tracking-tight italic sm:text-6xl">{name}</h1>
       <p class="mt-3 text-xl font-extrabold tracking-tight text-term-dim sm:text-2xl">
         {designation} @{' '}
@@ -50,19 +50,19 @@ const photoImage = authorPhotos.get(photo);
         <a
           href={resume}
           download
-          class="rounded-full bg-prompt px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+          class="rounded-md bg-prompt px-6 py-3 font-mono text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
         >
           {t('about.downloadResume')} →
         </a>
         <a
           href={`mailto:${socialLinks.find((s) => s.name.toLowerCase() === 'email')?.url.replace('mailto:', '') ?? ''}`}
-          class="rounded-full border border-panel-border px-6 py-3 text-sm font-semibold transition-colors hover:border-prompt hover:text-prompt"
+          class="rounded-md border border-panel-border px-6 py-3 font-mono text-sm font-semibold transition-colors hover:border-prompt hover:text-prompt"
         >
           {t('about.contactMe')}
         </a>
       </div>
 
-      <p class="mt-6 text-xs font-bold tracking-widest text-term-dim uppercase">Follow Me</p>
+      <p class="mt-6 font-mono text-xs font-bold tracking-widest text-term-dim uppercase">Follow Me</p>
       <div class="mt-2 flex flex-wrap items-center gap-3">
         {
           socialLinks.map((link) => (
