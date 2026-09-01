@@ -22,7 +22,10 @@ export const ui = {
     'stats.companies': 'Companies',
     'stats.skills': 'Skills',
     'theme.toggle': 'Toggle dark / light theme',
-    'lang.switchTo': 'Bahasa Indonesia'
+    'lang.switchTo': 'Bahasa Indonesia',
+    'watermark.skills': 'Skills',
+    'watermark.experiences': 'Journey',
+    'watermark.projects': 'Projects'
   },
   id: {
     'nav.about': 'Tentang',
@@ -38,7 +41,10 @@ export const ui = {
     'stats.companies': 'Perusahaan',
     'stats.skills': 'Keahlian',
     'theme.toggle': 'Ganti tema gelap / terang',
-    'lang.switchTo': 'English'
+    'lang.switchTo': 'English',
+    'watermark.skills': 'Keahlian',
+    'watermark.experiences': 'Perjalanan',
+    'watermark.projects': 'Proyek'
   }
 } as const;
 

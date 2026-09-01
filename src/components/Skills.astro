@@ -8,6 +8,7 @@ import SectionWatermark from './SectionWatermark.astro';
 
 interface Props {
   lang: Lang;
+  title: string;
   categories: {
     name: string;
     genericIcon: string;
@@ -17,7 +18,7 @@ interface Props {
   stats: { yearsExperience: string; projectsCount: number; companiesCount: number; skillsCount: number };
 }
 
-const { lang, categories, softSkills, stats } = Astro.props;
+const { lang, title, categories, softSkills, stats } = Astro.props;
 const t = useTranslations(lang);
 
 const statItems = [
@@ -45,7 +46,8 @@ const barColor: Record<string, string> = {
 ---
 
 <section id="skills" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 pt-6 pb-16 sm:pt-8 sm:pb-20">
-  <SectionWatermark text="Skills" />
+  <h2 class="sr-only">{title}</h2>
+  <SectionWatermark text={t('watermark.skills')} />
 
   <div class="relative mx-auto mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
     {

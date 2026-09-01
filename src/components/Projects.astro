@@ -19,12 +19,13 @@ interface Props {
   }[];
 }
 
-const { lang, projects } = Astro.props;
+const { lang, title, projects } = Astro.props;
 const t = useTranslations(lang);
 ---
 
 <section id="projects" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 py-16 sm:py-20">
-  <SectionWatermark text="Projects" />
+  <h2 class="sr-only">{title}</h2>
+  <SectionWatermark text={t('watermark.projects')} />
 
   <div class="relative mt-20 border-t border-panel-border" />
 
