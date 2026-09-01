@@ -1,7 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
-import SectionWatermark from './SectionWatermark.astro';
+import SectionHeading from './SectionHeading.astro';
 
 interface Props {
   lang: Lang;
@@ -25,8 +25,7 @@ const entries = experiences.flatMap((exp) => exp.positions.map((position) => ({ 
 ---
 
 <section id="experiences" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 py-16 sm:py-20">
-  <h2 class="sr-only">{title}</h2>
-  <SectionWatermark text={t('watermark.experiences')} />
+  <SectionHeading command='log --oneline --graph --author="me"' title={title} />
 
   <div class="relative mt-20 border-t border-panel-border" />
 

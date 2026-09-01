@@ -4,7 +4,7 @@ import type { Lang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import { skillIcons } from '../lib/images';
 import CategoryIcon from './CategoryIcon.astro';
-import SectionWatermark from './SectionWatermark.astro';
+import SectionHeading from './SectionHeading.astro';
 
 interface Props {
   lang: Lang;
@@ -46,8 +46,7 @@ const barColor: Record<string, string> = {
 ---
 
 <section id="skills" class="relative mx-auto max-w-[100rem] overflow-hidden px-6 pt-6 pb-16 sm:pt-8 sm:pb-20">
-  <h2 class="sr-only">{title}</h2>
-  <SectionWatermark text={t('watermark.skills')} />
+  <SectionHeading command="cat skills.json" title={title} />
 
   <div class="relative mx-auto mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
     {
